@@ -241,6 +241,7 @@ p, h1, h2, h3, ul, a{
     border: none;
     opacity: 0.5;
     cursor: pointer;
+    outline: none;
     z-index: 6;
 }
 .slider-button:hover {
@@ -262,7 +263,7 @@ left:42px
     height: 500px;   
 }
 
-.services-content {
+.services-content {  
     width: 1020px;
     height: 500px;
     margin: 0 auto;
@@ -273,7 +274,7 @@ left:42px
 }
 
 .services-content h2  {
-    padding: 59px 0 18.5px 0;
+    padding: 59px 0 18px 0;
     font-family: Lato, sans-serif;    
     font-weight: 900;
     text-align: left;
@@ -282,11 +283,13 @@ left:42px
 }
 
 .services-content > p {  
+  
   font-weight: 300;
   font-size: 18px;
-  line-height: 30px;
-   /* padding-left: -1px;  */
-  /* word-spacing: 6px; */
+  line-height: 30px;  
+ 
+  left: 1px;
+  top: 5px;
     
   text-align: justify;
 }
