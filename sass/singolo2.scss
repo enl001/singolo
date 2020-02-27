@@ -1,8 +1,10 @@
-@import "abstracts/variables";
-@import "base/base";
-@import "layout/background-wrapper";
-@import "layout/wrapper";
+@import './base/reset';
+@import './abstracts/variables';
+@import "./base/base";
+@import './base/typography';
+@import "./layout/body-wrapper";
+@import "./layout/wrapper";
 
 // components
-@import "components/portfolio";
-@import "components/about-us";
+@import "./components/portfolio";
+@import "./components/about-us";

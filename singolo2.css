@@ -1,12 +1,53 @@
-.background-width {
+html, body, h2, h3, section {
+  margin: 0;
+  padding: 0;
+}
+
+body, *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+h2 {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+}
+
+h3 {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  line-height: 17.86px;
+  font-size: 1.8rem;
+}
+
+.body-content {
   max-width: 1020px;
-  border: 1px solid green;
+  margin: 0 auto;
 }
 
 .wrapper {
   max-width: 940px;
-  margin: auto;
-  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.portfolio {
+  background-color: #2d303a;
+  padding-top: 68px;
+}
+.portfolio__title {
+  font-size: 3rem;
+  line-height: 0.595;
+  text-align: left;
+  color: #666d89;
+}
+.portfolio__text {
+  font-size: 1.8rem;
+  line-height: 1.667;
+  text-align: left;
+  color: #767e9e;
 }
 
 /*# sourceMappingURL=singolo2.css.map */

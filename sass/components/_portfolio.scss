@@ -1,0 +1,19 @@
+.portfolio {
+    background-color: $portfolio-background-color;
+      padding-top: 68px;
+
+    &__title{      
+      font-size: 3rem;  
+      line-height: 0.595;  
+      text-align: left;
+      color: $portfolio-title-color;
+    }
+    &__text{
+      font-size: 1.8rem;  
+      line-height: 1.667;  
+      text-align: left;
+      color: $portfolio-text-color;
+    }
+
+}
+
