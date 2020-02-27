@@ -1,2 +1,8 @@
 @import "abstracts/variables";
 @import "base/base";
+@import "layout/background-wrapper";
+@import "layout/wrapper";
+
+// components
+@import "components/portfolio";
+@import "components/about-us";

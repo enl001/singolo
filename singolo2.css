@@ -1,3 +1,12 @@
+.background-width {
+  max-width: 1020px;
+  border: 1px solid green;
+}
 
+.wrapper {
+  max-width: 940px;
+  margin: auto;
+  border: 1px solid red;
+}
 
 /*# sourceMappingURL=singolo2.css.map */
