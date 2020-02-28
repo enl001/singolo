@@ -1,0 +1,41 @@
+.button-panel {
+    display: flex;
+    justify-content: left;
+    font-family: $base-font-family;
+
+    &__button {
+        background-color: $portfolio-background-color;
+        border: 1px solid $button-color-primary;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1.2rem;
+        font-weight: $font-weight-normal;
+        line-height: 1.833;
+        color: $button-color-primary;
+
+    }
+    &__button_selected {        
+        border-color: $button-color-secondary; 
+        color: $button-color-secondary;
+    }
+    &__button:focus {        
+        border-color: $button-color-secondary; 
+        color: $button-color-secondary;
+    }
+    &__button:hover {        
+        border-color: $button-color-secondary; 
+        color: $button-color-secondary;
+
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+         transition: all 500ms ease;
+         
+    }
+    
+
+
+
+
+}

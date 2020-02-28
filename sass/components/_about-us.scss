@@ -1,0 +1,23 @@
+.about-us {
+    background-color: $about-us-background-color;
+    padding-top: 68px;
+    border-bottom: 6px solid $about-us-border-color;
+    font-family: $base-font-family;
+
+    &__title{      
+      font-weight: $font-weight-black; 
+      font-size: 3rem;  
+      color: $about-us-title-color;
+      line-height: 0.595;  
+      text-align: left;
+    }
+    &__text{
+      font-weight: $font-weight-light;
+      font-size: 1.8rem;  
+      color: $about-us-text-color;
+      line-height: 1.667;  
+      text-align: left;
+    }
+
+}
+

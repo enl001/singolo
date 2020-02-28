@@ -1,14 +1,20 @@
 .portfolio {
     background-color: $portfolio-background-color;
       padding-top: 68px;
+      border-bottom: 6px solid $portfolio-border-color;
+      font-family: $base-font-family;
 
-    &__title{      
+    &__title{     
+      
+      font-weight: $font-weight-black; 
       font-size: 3rem;  
       line-height: 0.595;  
       text-align: left;
       color: $portfolio-title-color;
     }
     &__text{
+
+      font-weight: $font-weight-light;
       font-size: 1.8rem;  
       line-height: 1.667;  
       text-align: left;

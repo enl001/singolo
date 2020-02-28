@@ -1,10 +1,17 @@
 @import './base/reset';
 @import './abstracts/variables';
-@import "./base/base";
+@import './base/base';
 @import './base/typography';
-@import "./layout/body-wrapper";
-@import "./layout/wrapper";
+@import './layout/body-wrapper';
+@import './layout/wrapper';
 
 // components
-@import "./components/portfolio";
-@import "./components/about-us";
+@import './components/portfolio';
+@import './components/button-panel';
+@import './components/art-album';
+@import './components/about-us';
+@import './components/cards-container';
+@import './components/card';
+@import './components/cards-container';
+@import './components/card';
+@import './components/social-panel';

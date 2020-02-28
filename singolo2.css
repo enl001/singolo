@@ -1,4 +1,4 @@
-html, body, h2, h3, section {
+html, body, h2, h3, p, section {
   margin: 0;
   padding: 0;
 }
@@ -11,16 +11,9 @@ html {
   font-size: 10px;
 }
 
-h2 {
-  font-family: Lato, sans-serif;
-  font-weight: 900;
-}
-
 h3 {
   font-family: Lato, sans-serif;
   font-weight: 900;
-  line-height: 17.86px;
-  font-size: 1.8rem;
 }
 
 .body-content {
@@ -36,18 +29,158 @@ h3 {
 .portfolio {
   background-color: #2d303a;
   padding-top: 68px;
+  border-bottom: 6px solid #323746;
+  font-family: Lato, sans-serif;
 }
 .portfolio__title {
+  font-weight: 900;
   font-size: 3rem;
   line-height: 0.595;
   text-align: left;
   color: #666d89;
 }
 .portfolio__text {
+  font-weight: 300;
   font-size: 1.8rem;
   line-height: 1.667;
   text-align: left;
   color: #767e9e;
+}
+
+.button-panel {
+  display: flex;
+  justify-content: left;
+  font-family: Lato, sans-serif;
+}
+.button-panel__button {
+  background-color: #2d303a;
+  border: 1px solid #767e9e;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.833;
+  color: #767e9e;
+}
+.button-panel__button_selected {
+  border-color: #dedede;
+  color: #dedede;
+}
+.button-panel__button:focus {
+  border-color: #dedede;
+  color: #dedede;
+}
+.button-panel__button:hover {
+  border-color: #dedede;
+  color: #dedede;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.art-album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 640px;
+  height: auto;
+  overflow: hidden;
+}
+.art-album__image {
+  flex: 1 0 21%;
+  max-width: 220px;
+  max-height: 187px;
+  width: auto;
+  height: auto;
+  margin: 19px 0 1px 0;
+  background-color: #464b5e;
+}
+
+.about-us {
+  background-color: #f2f2f2;
+  padding-top: 68px;
+  border-bottom: 6px solid white;
+  font-family: Lato, sans-serif;
+}
+.about-us__title {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #666d89;
+  line-height: 0.595;
+  text-align: left;
+}
+.about-us__text {
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #767e9e;
+  line-height: 1.667;
+  text-align: left;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  font-family: Lato, sans-serif;
+}
+.card__name {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 900;
+  color: #666d89;
+}
+.card__text {
+  font-size: 1.2rem;
+  line-height: 1.833;
+  font-weight: normal;
+  color: #767e9e;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  font-family: Lato, sans-serif;
+}
+.card__name {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 900;
+  color: #666d89;
+}
+.card__text {
+  font-size: 1.2rem;
+  line-height: 1.833;
+  font-weight: normal;
+  color: #767e9e;
+}
+
+.social-panel {
+  display: flex;
+  justify-content: left;
+}
+.social-panel__link {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+}
+.social-panel__link_facebook {
+  background-image: url("./assets/images/social/Facebook.svg");
+}
+.social-panel__link_google {
+  background-image: url("./assets/images/social/Google.svg");
+}
+.social-panel__link_twitter {
+  background-image: url("./assets/images/social/Twitter.svg");
+}
+.social-panel__link_linkedin {
+  background-image: url("./assets/images/social/LinkedIn.svg");
 }
 
 /*# sourceMappingURL=singolo2.css.map */
