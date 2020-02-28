@@ -1,5 +1,7 @@
 @import './base/reset';
 @import './abstracts/variables';
+@import './abstracts/mixins';
+
 @import './base/base';
 @import './base/typography';
 @import './layout/body-wrapper';
@@ -7,6 +9,7 @@
 
 // components
 @import './components/portfolio';
+@import './abstracts/placeholder';
 @import './components/button-panel';
 @import './components/art-album';
 @import './components/about-us';
@@ -15,3 +18,4 @@
 @import './components/cards-container';
 @import './components/card';
 @import './components/social-panel';
+

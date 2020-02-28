@@ -1,18 +1,19 @@
 .social-panel {
     display: flex;
-    justify-content: left; 
-    
+    width: 51%;
+    justify-content: space-between;   
+    padding-top: 24px;
 
 
     &__link {
       display: inline-block;
       
-      width: 33px;
-      height: 33px;      
+       width: 32px;
+       height: 32px;      
 
       &_facebook {
-        background-image: url('./assets/images/social/Facebook.svg');
-        
+        background-image: url('./assets/images/social/Facebook.svg'); 
+              
       }
       &_google {
         background-image: url('./assets/images/social/Google.svg');
