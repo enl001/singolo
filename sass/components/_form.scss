@@ -1,0 +1,51 @@
+.form {
+    max-width: 619px;
+    width: 100%;
+    
+
+
+    &__input,&__textarea {
+        width: 100%;
+        
+        margin-bottom: 16px;
+        padding-left: 15px;
+        background-color: $get-a-quote-input-color;
+        font-family: $base-font-family;
+        color: $get-a-quote-input-text-color;
+        border-radius: 5px;
+        outline: none;
+
+        &::placeholder {
+            color: $get-a-quote-input-text-color; 
+        }
+        
+
+    }   
+    &__input {
+        height: 38px;        
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 38px $get-a-quote-input-color inset !important;
+    box-shadow: 0 0 0 38px $get-a-quote-input-color inset !important;
+    -webkit-text-fill-color: $get-a-quote-input-text-color !important;
+
+  }  
+
+    &__textarea{
+        height: 202px;
+        resize: none;
+    }
+
+}
+
+input[type="text"],input[type="email"],textarea{
+    @include font ($size: 1.2rem, 
+               $height: 1.83,
+               $weight: $font-weight-normal,
+               $style: normal);
+    color: $get-a-quote-input-text-color;
+}

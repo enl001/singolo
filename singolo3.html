@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Singolo</title>
+    <link rel="stylesheet" href="singolo3.css">
+    <link rel="stylesheet" href="fonts.css">
 </head>
-<body>
+<body class="body-content">
     <section class="get-a-quote">
+      <div class="wrapper">
       <h2 class="get-a-quote__header">Get a Quote</h2>
       <p class="get-a-quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-    </section>
+    
     <div class="layout-2-column">
+      <div class="left-column">
       <form action="/quote" method="POST" class="form">
         <input type="text" name="name" class="form__input" placeholder="Name (Required)" required>
         <input type="email" name="email" class="form__input" placeholder="Email (Required)" required>
         <input type="text" name="subject" class="form__input" placeholder="Subject">
-        <textarea name="description" cols="30" rows="10" class="form__input" placeholder="Describe your project in detail..."></textarea>      
+        <textarea name="description" cols="30" rows="10" class="form__textarea" placeholder="Describe your project in detail..."></textarea>      
         <input type="submit" name="submit" value="Get a Quote">
       </form>
-      <div class="contact-information">
+    </div>
+    <div class="right-column contact-information">      
         <h3 class="contact-information__header">Contact Information</h3>
         <p class="contact-information__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
         <div class="contact-information__contacts">
@@ -27,10 +32,13 @@
             <li class="contacts__item"><a href="tel:035283318635" class="contacts__link">03528 331 86 35</a></li>
             <li class="contacts__item"><a href="mailto:info@singolo.com" class="contacts__link">info@singolo.com</a></li>
           </ul>
-        </div>
+        </div>      
       </div>
     </div>
+  </div>
+  </section>
     <footer class="footer">
+      <div class="wrapper">
       <p class="footer__copyright">&copy;Copyright 2013</p>
       <div class="footer__social">
         <div class="social-panel">
@@ -39,6 +47,7 @@
           <a href="https://twitter.com/" class="social-panel__link social-panel__link_twitter"></a>
           <a href="https://www.linkedin.com/" class="social-panel__link social-panel__link_linkedin"></a>
         </div>
+      </div>
       </div>
     </footer>
 </body>

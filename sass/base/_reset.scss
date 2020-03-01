@@ -1,4 +1,8 @@
-html,body,h2,h3,p,section,button {
+html,body,h2,h3,p,section,button,input {
     margin: 0;
     padding: 0;
+}
+
+input,textarea{
+    border: none;    
 }
