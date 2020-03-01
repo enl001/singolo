@@ -1,0 +1,30 @@
+.portfolio {
+    background-color: $portfolio-background-color;
+      padding-top: 69px;
+      border-bottom: 6px solid $portfolio-border-color;
+      font-family: $base-font-family;
+      height: 870px;
+
+    &__title{     
+      
+      font-weight: $font-weight-black; 
+      font-size: 3rem;  
+      line-height: 0.595;  
+      text-align: left;
+      letter-spacing:-0.2px;
+      color: $portfolio-title-color;
+      //@include font();
+    }
+    &__text{
+
+      margin: 27px 0 11px 0;
+      font-weight: $font-weight-light;
+      font-size: 1.8rem;  
+      line-height: 1.667;  
+      text-align: left;
+      color: $portfolio-text-color;
+      @include transform(0.98);
+    }
+
+}
+

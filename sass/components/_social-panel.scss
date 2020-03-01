@@ -1,0 +1,30 @@
+.social-panel {
+    display: flex;
+    width: 51%;
+    justify-content: space-between;   
+    padding-top: 24px;
+
+
+    &__link {
+      display: inline-block;
+      
+       width: 32px;
+       height: 32px;      
+
+      &_facebook {
+        background-image: url('./assets/images/social/Facebook.svg'); 
+              
+      }
+      &_google {
+        background-image: url('./assets/images/social/Google.svg');
+      }
+      &_twitter {
+        background-image: url('./assets/images/social/Twitter.svg');  
+      }
+      &_linkedin {
+        background-image: url('./assets/images/social/LinkedIn.svg');  
+      }
+
+    }
+  }
+    

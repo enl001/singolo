@@ -1,0 +1,20 @@
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding-top: 5px;
+
+  // &__card {
+  //   //flex: 1 0 32%;      
+  // }
+  &__card:nth-child(2) {
+    margin-left: -1px;
+  }
+
+  &__card:first-child .card__text {
+    @include transform(1, -0.08px);
+    
+  }
+
+}
