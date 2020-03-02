@@ -1,0 +1,22 @@
+.contacts {
+    list-style: none;
+    
+
+    &__link {
+      @include font ($size : 1.2rem, 
+               $height: 1.833,
+               $weight: $font-weight-normal,
+               $style: normal); 
+      color: $get-a-quote-text-color;         
+      text-decoration: none;
+      
+
+
+      &_phone {
+        background-image: url('./assets/images/get-a-quote/phone.png');
+        background-repeat: no-repeat;
+        padding-left: 30px ;
+      }
+    }
+
+}

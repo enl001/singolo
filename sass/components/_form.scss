@@ -11,19 +11,33 @@
         padding-left: 15px;
         background-color: $get-a-quote-input-color;
         font-family: $base-font-family;
-        color: $get-a-quote-input-text-color;
+        color: $get-a-quote-text-color; 
         border-radius: 5px;
         outline: none;
 
         &::placeholder {
-            color: $get-a-quote-input-text-color; 
-        }
-        
-
+            color: $get-a-quote-input-placeholder-color; 
+        }      
     }   
+
     &__input {
         height: 38px;        
     }
+
+    &__submit {
+        @include font ($size : 1.6rem, 
+               $height: 1,
+               $weight: $font-weight-light,
+               $style: normal); 
+        color: $get-a-quote-text-color; 
+        height: 38px;                 
+        padding: 0 15px;
+        background-color: $get-a-quote-input-color;
+        border-radius: 5px;
+        float: right;
+        cursor: pointer;
+    }
+
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
@@ -31,7 +45,7 @@
     input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 38px $get-a-quote-input-color inset !important;
     box-shadow: 0 0 0 38px $get-a-quote-input-color inset !important;
-    -webkit-text-fill-color: $get-a-quote-input-text-color !important;
+    -webkit-text-fill-color: $get-a-quote-input-placeholder-color !important;
 
   }  
 
@@ -47,5 +61,5 @@ input[type="text"],input[type="email"],textarea{
                $height: 1.83,
                $weight: $font-weight-normal,
                $style: normal);
-    color: $get-a-quote-input-text-color;
+    color: $get-a-quote-text-color;
 }

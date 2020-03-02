@@ -1,4 +1,4 @@
-html, body, h2, h3, p, section, button, input {
+html, body, h2, h3, p, section, button, input, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -73,7 +73,7 @@ html {
   padding-left: 15px;
   background-color: #d6564f;
   font-family: Lato, sans-serif;
-  color: #f48c8f;
+  color: #f0d8d9;
   border-radius: 5px;
   outline: none;
 }
@@ -82,6 +82,19 @@ html {
 }
 .form__input {
   height: 38px;
+}
+.form__submit {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  color: #f0d8d9;
+  height: 38px;
+  padding: 0 15px;
+  background-color: #d6564f;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
 }
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
@@ -101,12 +114,89 @@ input[type=text], input[type=email], textarea {
   font-style: normal;
   font-weight: normal;
   line-height: 1.83;
-  color: #f48c8f;
+  color: #f0d8d9;
 }
 
 .contact-information {
   max-width: 300px;
   width: 100%;
+}
+.contact-information__header {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  color: #f0d8d9;
+}
+.contact-information__text {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.833;
+  color: #f0d8d9;
+  padding: 22px 0 29px 0;
+  text-align: justify;
+}
+.contact-information .contacts__link_phone {
+  padding-right: 30px;
+}
+
+.loc {
+  fill: red;
+}
+
+.contacts {
+  list-style: none;
+}
+.contacts__link {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.833;
+  color: #f0d8d9;
+  text-decoration: none;
+}
+.contacts__link_phone {
+  background-image: url("./assets/images/get-a-quote/phone.png");
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.footer {
+  background-color: #2d303a;
+  position: relative;
+}
+.footer__copyright {
+  position: absolute;
+  left: 0;
+}
+.footer__social {
+  position: absolute;
+  right: 0;
+}
+
+.social-panel {
+  display: flex;
+  width: 51%;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.social-panel__link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.social-panel__link_facebook {
+  background-image: url("./assets/images/social/Facebook.svg");
+}
+.social-panel__link_google {
+  background-image: url("./assets/images/social/Google.svg");
+}
+.social-panel__link_twitter {
+  background-image: url("./assets/images/social/Twitter.svg");
+}
+.social-panel__link_linkedin {
+  background-image: url("./assets/images/social/LinkedIn.svg");
 }
 
 /*# sourceMappingURL=singolo3.css.map */
