@@ -1,15 +1,8 @@
 .footer {
     background-color: $footer-background-color;
-    position: relative;
-
-    &__copyright {
-        position: absolute;
-        left: 0;
-    }    
-
-    &__social {
-        position: absolute;
-        right: 0;
-    }
+    
+    width: 100%;
+      
 
 }
+

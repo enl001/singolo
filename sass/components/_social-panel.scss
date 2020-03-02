@@ -1,9 +1,8 @@
 .social-panel {
     display: flex;
-    width: 51%;
-    justify-content: space-between;   
-    padding-top: 24px;
-
+    max-width: 152px;
+    width: 152px;
+    justify-content: space-between; 
 
     &__link {
       display: inline-block;

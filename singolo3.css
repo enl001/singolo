@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, h2, h3, p, section, button, input, ul, li {
   margin: 0;
   padding: 0;
@@ -164,22 +165,32 @@ input[type=text], input[type=email], textarea {
 
 .footer {
   background-color: #2d303a;
-  position: relative;
+  width: 100%;
 }
-.footer__copyright {
-  position: absolute;
-  left: 0;
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
 }
-.footer__social {
-  position: absolute;
-  right: 0;
+.footer-content__copyright {
+  flex-grow: 1;
+  background-image: url("./assets/images/get-a-quote/© Copyright 2013 · by PSDchat.com.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 11px;
+}
+.footer-content__social {
+  flex-grow: 1;
 }
 
 .social-panel {
   display: flex;
-  width: 51%;
+  max-width: 152px;
+  width: 152px;
   justify-content: space-between;
-  padding-top: 24px;
 }
 .social-panel__link {
   display: inline-block;
