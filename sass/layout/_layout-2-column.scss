@@ -1,0 +1,13 @@
+.layout-2-column {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+}
+.left-column {
+   flex-grow: 2;
+}
+.right-column {
+    flex-grow: 1;
+}
