@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch sass/singolo3.scss singolo3.css",
+    "style": "sass --watch sass/singolo1.scss singolo1.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
