@@ -50,9 +50,15 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: 0.6;
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  letter-spacing: -0.1px;
   color: #f0d8d9;
   text-align: left;
-  padding: 67px 0 30px 0;
+  padding: 69px 0 28px 0;
 }
 .get-a-quote__text {
   font-size: 1.8rem;
@@ -61,7 +67,7 @@ html {
   line-height: 1.667;
   color: #f0d8d9;
   text-align: justify;
-  padding-bottom: 35px;
+  padding-bottom: 43px;
 }
 
 .form {
@@ -71,7 +77,7 @@ html {
 .form__input, .form__textarea {
   width: 100%;
   margin-bottom: 16px;
-  padding-left: 15px;
+  padding: 0 15px;
   background-color: #d6564f;
   font-family: Lato, sans-serif;
   color: #f0d8d9;
@@ -83,6 +89,11 @@ html {
 }
 .form__input {
   height: 38px;
+}
+.form__textarea {
+  padding-top: 8px;
+  height: 202px;
+  resize: none;
 }
 .form__submit {
   font-size: 1.6rem;
@@ -96,6 +107,7 @@ html {
   border-radius: 5px;
   float: right;
   cursor: pointer;
+  margin-bottom: 11px;
 }
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
@@ -104,10 +116,6 @@ html {
   -webkit-box-shadow: 0 0 0 38px #d6564f inset !important;
   box-shadow: 0 0 0 38px #d6564f inset !important;
   -webkit-text-fill-color: #f48c8f !important;
-}
-.form__textarea {
-  height: 202px;
-  resize: none;
 }
 
 input[type=text], input[type=email], textarea {
@@ -127,23 +135,30 @@ input[type=text], input[type=email], textarea {
   font-style: normal;
   font-weight: 900;
   line-height: 1;
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  letter-spacing: -0.1px;
   color: #f0d8d9;
+  padding-top: 1px;
 }
 .contact-information__text {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.833;
+  word-wrap: break-word;
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  letter-spacing: -0.1px;
   color: #f0d8d9;
-  padding: 22px 0 29px 0;
+  padding: 10px 0 22px 0;
   text-align: justify;
-}
-.contact-information .contacts__link_phone {
-  padding-right: 30px;
-}
-
-.loc {
-  fill: red;
 }
 
 .contacts {
@@ -156,11 +171,22 @@ input[type=text], input[type=email], textarea {
   line-height: 1.833;
   color: #f0d8d9;
   text-decoration: none;
+  margin-left: -1px;
 }
 .contacts__link_phone {
   background-image: url("./assets/images/get-a-quote/phone.png");
   background-repeat: no-repeat;
-  padding-left: 30px;
+  padding-left: 24px;
+}
+.contacts__link_mail {
+  background-image: url("./assets/images/get-a-quote/mail.png");
+  background-repeat: no-repeat;
+  padding-left: 24px;
+}
+.contacts__link_location {
+  background-image: url("./assets/images/get-a-quote/location.png");
+  background-repeat: no-repeat;
+  padding-left: 24px;
 }
 
 .footer {
@@ -176,6 +202,8 @@ input[type=text], input[type=email], textarea {
 }
 .footer-content__copyright {
   flex-grow: 1;
+  margin-left: 3px;
+  margin-top: 1px;
   background-image: url("./assets/images/get-a-quote/© Copyright 2013 · by PSDchat.com.png");
   background-repeat: no-repeat;
   background-size: contain;

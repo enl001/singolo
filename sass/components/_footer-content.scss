@@ -8,13 +8,8 @@
     &__copyright {
 
         flex-grow: 1;
-
-        // @include font ($size: 3rem, 
-        //        $height: 0.6,
-        //        $weight: $font-weight-black,
-        //        $style: normal);
-        // color: $get-a-quote-title-color; 
-
+        margin-left: 3px;
+        margin-top: 1px;        
         background-image: url('./assets/images/get-a-quote/© Copyright 2013 · by PSDchat.com.png');
         background-repeat: no-repeat;
         background-size: contain;
@@ -24,7 +19,6 @@
     
     &__social {
         flex-grow: 1;
-
      }
 
 }

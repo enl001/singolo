@@ -8,7 +8,7 @@
         width: 100%;
         
         margin-bottom: 16px;
-        padding-left: 15px;
+        padding: 0 15px;
         background-color: $get-a-quote-input-color;
         font-family: $base-font-family;
         color: $get-a-quote-text-color; 
@@ -16,12 +16,19 @@
         outline: none;
 
         &::placeholder {
+            
             color: $get-a-quote-input-placeholder-color; 
         }      
     }   
 
     &__input {
         height: 38px;        
+    }
+
+    &__textarea{
+        padding-top: 8px;
+        height: 202px;
+        resize: none;
     }
 
     &__submit {
@@ -36,6 +43,7 @@
         border-radius: 5px;
         float: right;
         cursor: pointer;
+        margin-bottom: 11px;
     }
 
 
@@ -49,10 +57,7 @@
 
   }  
 
-    &__textarea{
-        height: 202px;
-        resize: none;
-    }
+    
 
 }
 

@@ -9,9 +9,10 @@
                $height: 0.6,
                $weight: $font-weight-black,
                $style: normal);
+        @include transform($scaleY:1, $spacing:-0.1px);       
         color: $get-a-quote-title-color;       
         text-align: left;  
-        padding: 67px 0 30px 0;
+        padding: 69px 0 28px 0;
 
     }
 
@@ -22,7 +23,7 @@
                $style: normal); 
         color: $get-a-quote-text-color; 
         text-align: justify;    
-        padding-bottom: 35px;          
+        padding-bottom: 43px;          
     }
 
 }
