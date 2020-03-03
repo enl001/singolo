@@ -1,0 +1,33 @@
+.contacts {
+    list-style: none;    
+
+    &__link {
+      @include font ($size : 1.2rem, 
+               $height: 1.833,
+               $weight: $font-weight-normal,
+               $style: normal); 
+      color: $get-a-quote-text-color;         
+      text-decoration: none;
+      margin-left:-1px;
+
+      &_phone {
+        background-image: url('./assets/images/get-a-quote/phone.png');
+        background-repeat: no-repeat;
+        padding-left: 24px ;
+      }
+
+      &_mail {
+        background-image: url('./assets/images/get-a-quote/mail.png');
+        background-repeat: no-repeat;
+        padding-left: 24px ;
+      }
+
+      &_location {
+        background-image: url('./assets/images/get-a-quote/location.png');
+        background-repeat: no-repeat;
+        padding-left: 24px ;
+      }
+
+    }
+
+}

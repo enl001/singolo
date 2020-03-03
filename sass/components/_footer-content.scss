@@ -1,0 +1,26 @@
+.footer-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+
+
+    &__copyright {
+
+        flex-grow: 1;
+        margin-left: 3px;
+        margin-top: 1px;        
+        background-image: url('./assets/images/get-a-quote/© Copyright 2013 · by PSDchat.com.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 11px;
+    }    
+    
+    &__social {
+        flex-grow: 1;
+     }
+
+}
+
+  

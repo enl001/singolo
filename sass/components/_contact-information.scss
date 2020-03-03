@@ -1,0 +1,30 @@
+.contact-information {
+    max-width: 300px;
+    width: 100%;
+
+    &__header {
+      @include font ($size : 1.8rem, 
+               $height: 1,
+               $weight: $font-weight-black,
+               $style: normal); 
+      
+      @include transform($scaleY:1, $spacing:-0.1px);          
+               
+      color: $get-a-quote-title-color;
+      padding-top: 1px;
+    }
+
+    &__text {
+      @include font ($size : 1.2rem, 
+               $height: 1.833,
+               $weight: $font-weight-normal,
+               $style: normal); 
+
+               word-wrap: break-word;
+               @include transform($scaleY:1, $spacing:-0.1px);
+      color: $get-a-quote-text-color;
+      padding: 10px 0 22px 0;
+      text-align: justify; 
+    }
+
+}
