@@ -1,9 +1,9 @@
 .header-content{
   display:flex;
+  height: 89px; 
   justify-content: space-between;  
   font-family: $base-font-family;
-  height: 95px;
-  border-bottom: 6px solid $header-border-color;
+   
   
   &__logo {
     align-self: center;    
@@ -11,10 +11,13 @@
     @include font ($size:2.5rem, $height:0.24, $weight:$font-weight-bold, $style: normal);
     color: $header-title-color-primary;
     text-transform: uppercase; 
-
+    @include transform($scaleY: 1.05, $spacing:-0.45px);
+padding-bottom: 1px;
     &:after {
       content: '*';
+      @include font ($size:2.5rem, $height:0.24, $weight:$font-weight-bold, $style: normal);
       color: $header-title-color-secondary;
+      margin-left:-5px;
     }
   }
   &__link {

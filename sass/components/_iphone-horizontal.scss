@@ -1,0 +1,27 @@
+.iphone-horizontal {
+    position: absolute;
+    display: inline-block;  
+    left:385px;
+    top:174px;
+    
+
+    &__shadow {
+      position: absolute;
+      width: 483px;
+      height: 240px;
+      background-image: url('./assets/images/slider/iphoneHorizontalShadow.png');
+      z-index: 1;
+    }
+
+    &__screen {
+      position: absolute;
+      display: inline-block;
+      top: 11px;
+      left: 57px;
+      width: 339px;
+      height: 194px;
+      background-image: url('./assets/images/slider/iphoneHorizontalScreen.png');
+      z-index: 4;
+    }
+    
+  }

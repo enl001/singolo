@@ -1,0 +1,19 @@
+.services {
+    background-color: $services-background-color;
+    border-bottom: 6px solid $services-border-color;
+    font-family: $base-font-family;
+
+    &__header {
+      padding-top: 70px;
+      @include font($size: 3rem, $height: 0.6, $weight: $font-weight-black, $style: normal);
+      color: $services-title-color;
+    }
+    &__text {
+      @include font($size: 1.8rem, $height: 1.66, $weight: $font-weight-light, $style: normal);
+      color: $services-text-color;
+      padding: 35px 0 55px 1px;
+      text-align: justify;
+    }
+
+
+}

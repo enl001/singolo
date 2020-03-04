@@ -9,6 +9,9 @@
 
 @import './layout/body-wrapper';
 @import './layout/wrapper';
+@import './layout/slider-content';
+@import './layout/iphone-rotate';
+@import './layout/layout-3-column';
 
 
 // components
@@ -16,7 +19,11 @@
 @import './components/header-content';
 @import './components/header-menu';
 @import './components/slider';
+@import './components/iphone-vertical';
+@import './components/iphone-horizontal';
 @import './components/iphone';
 @import './components/i-camera';
 @import './components/i-button';
-@import './components/iphone-vertical';
+@import './components/services';
+@import './components/service';
+@import './components/service-content';
