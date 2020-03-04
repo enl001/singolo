@@ -1,0 +1,36 @@
+.iphone {
+  display: inline-block;
+  position: relative;
+  width: 215px;
+  height: 458px;
+
+  &__body {
+    //position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $slider-body-background-color;
+    border-radius: 27px;
+  }
+  &__speaker {
+    position: absolute;
+    top:38px;
+    left: 89px;
+    width: 36px;
+    height: 5px;
+    background-color: $slider-speaker-background-color;
+    border-radius: 3px;
+  }
+
+  &__camera {
+    position: absolute;
+    top:21px;
+    left: 102px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom:50px;
+    left: 86px;
+  }
+
+}

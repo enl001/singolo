@@ -113,4 +113,87 @@ html {
   opacity: 1;
 }
 
+.iphone {
+  display: inline-block;
+  position: relative;
+  width: 215px;
+  height: 458px;
+}
+.iphone__body {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  border-radius: 27px;
+}
+.iphone__speaker {
+  position: absolute;
+  top: 38px;
+  left: 89px;
+  width: 36px;
+  height: 5px;
+  background-color: #acacac;
+  border-radius: 3px;
+}
+.iphone__camera {
+  position: absolute;
+  top: 21px;
+  left: 102px;
+}
+.iphone__button {
+  position: absolute;
+  bottom: 50px;
+  left: 86px;
+}
+
+.i-camera {
+  position: relative;
+}
+.i-camera__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  z-index: 4;
+}
+.i-camera__dot {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #eb5055;
+  z-index: 5;
+}
+
+.i-button {
+  position: relative;
+}
+.i-button__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #fafafa;
+}
+.i-button__square {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #bababa;
+  border-radius: 4px;
+}
+
+.iphone-vertical__shadow {
+  background-image: url("./assets/images/slider/iphoneVerticalShadow.png");
+  z-index: 2;
+}
+
 /*# sourceMappingURL=singolo1.css.map */
