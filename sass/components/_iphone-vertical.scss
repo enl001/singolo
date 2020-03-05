@@ -1,0 +1,25 @@
+.iphone-vertical {
+  position: absolute;
+  display: inline-block;  
+  left:72px;
+  top: 53px;
+  
+  &__shadow {
+    position: absolute;
+    width: 240px;
+    height: 483px;
+    background-image: url('./assets/images/slider/iphoneVerticalShadow.png');
+    z-index: 1;
+  }
+  &__screen {
+    position: absolute;
+    display: inline-block;
+    top: 62px;
+    left: 11px;
+    width: 194px;
+    height: 339px;
+    background-image: url('./assets/images/slider/iphoneVerticalScreen.png');
+    z-index: 4;
+  }
+  
+}

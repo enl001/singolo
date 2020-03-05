@@ -1,0 +1,24 @@
+.i-button {
+  position: relative;
+
+  &__circle {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: $slider-button-background-color;
+  }
+
+  &__square {
+    position: absolute;
+    top:13px;
+    left: 13px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $slider-button-color;
+    border-radius : 4px;
+  }
+
+}

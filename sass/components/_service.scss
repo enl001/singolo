@@ -1,0 +1,25 @@
+.service {
+  width: 300px;
+  height: auto;
+  padding-bottom: 31px;
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    margin-top: 2px;    
+    width: 59px;
+    height: 59px;
+    resize: none;
+    border: 2 solid black;
+    border-radius: 50%;
+    z-index: 7;
+  }
+
+  &__content {
+    margin-top: -1px;
+    //padding-left: 20px;
+    max-width: 220px;
+
+  }
+
+}
