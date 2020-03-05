@@ -14,18 +14,23 @@
         background-image: url('./assets/images/get-a-quote/phone.png');
         background-repeat: no-repeat;
         padding-left: 24px ;
+        resize: none;
       }
 
       &_mail {
         background-image: url('./assets/images/get-a-quote/mail.png');
         background-repeat: no-repeat;
         padding-left: 24px ;
+        width: 15px;
+        height: 15px;
+        resize: none;
       }
 
       &_location {
         background-image: url('./assets/images/get-a-quote/location.png');
         background-repeat: no-repeat;
         padding-left: 24px ;
+        resize: none;
       }
 
     }

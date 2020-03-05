@@ -12,16 +12,20 @@
 
       &_facebook {
         background-image: url('./assets/images/social/Facebook.svg'); 
+        resize: none;
               
       }
       &_google {
         background-image: url('./assets/images/social/Google.svg');
+        resize: none;
       }
       &_twitter {
         background-image: url('./assets/images/social/Twitter.svg');  
+        resize: none;
       }
       &_linkedin {
-        background-image: url('./assets/images/social/LinkedIn.svg');  
+        background-image: url('./assets/images/social/LinkedIn.svg'); 
+        resize: none; 
       }
 
     }

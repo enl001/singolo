@@ -3,7 +3,7 @@
   background-color: $slider-background-color;
   border-bottom: 6px solid $slider-border-color;
   position: relative;
-  height: 600px;
+  min-height: 600px;
   width: auto;
 
   &__button {

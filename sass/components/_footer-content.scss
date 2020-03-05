@@ -1,26 +1,30 @@
-.footer-content{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 76px;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
 
+  &__copyright {
+    flex-grow: 1;
+    margin-left: 2px;
+    margin-top: 0px;
+    //background-image: url('./assets/images/get-a-quote/© Copyright 2013 · by PSDchat.com.png');
+    //background-repeat: no-repeat;
+    //background-size: contain;
+    //width: 200px;
+    //height: 11px;
+    @include font(
+      $size: 1.2rem,
+      $height: 0.5,
+      $weight: $font-weight-normal,
+      $style: normal);
+    color: $footer-text-color;
+    @include transform(1.05, 0.25px);
+    word-spacing: -0.4px;;
+    text-align: left;
+  }
 
-    &__copyright {
-
-        flex-grow: 1;
-        margin-left: 3px;
-        margin-top: 1px;        
-        background-image: url('./assets/images/get-a-quote/© Copyright 2013 · by PSDchat.com.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 200px;
-        height: 11px;
-    }    
-    
-    &__social {
-        flex-grow: 1;
-     }
-
+  &__social {
+    flex-grow: 1;
+  }
 }
-
-  

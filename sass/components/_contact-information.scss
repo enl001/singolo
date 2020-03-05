@@ -8,10 +8,10 @@
                $weight: $font-weight-black,
                $style: normal); 
       
-      @include transform($scaleY:1, $spacing:-0.1px);          
+      @include transform($scaleY:1.1, $spacing:-0.1px);          
                
       color: $get-a-quote-title-color;
-      padding-top: 1px;
+      //padding-top: 1px;
     }
 
     &__text {
