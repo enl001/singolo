@@ -354,7 +354,7 @@ html {
 .service {
   width: 300px;
   height: auto;
-  padding-bottom: 29px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
