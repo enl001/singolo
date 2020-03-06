@@ -363,9 +363,7 @@ html {
   width: 59px;
   height: 59px;
   resize: none;
-  border: 2px solid black;
   border-radius: 50%;
-  z-index: 7;
 }
 .service__content {
   margin-top: -1px;
