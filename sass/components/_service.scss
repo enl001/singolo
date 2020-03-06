@@ -1,7 +1,7 @@
 .service {
   width: 300px;
   height: auto;
-  padding-bottom: 31px;
+  padding-bottom: 29px;
   display: flex;
   justify-content: space-between;
 
@@ -10,7 +10,7 @@
     width: 59px;
     height: 59px;
     resize: none;
-    border: 2 solid black;
+    border: 2px solid black;
     border-radius: 50%;
     z-index: 7;
   }

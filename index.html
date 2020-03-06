@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fonts.css" />
@@ -11,7 +11,7 @@
     <!-- Singolo1 -->
     <header class="header">
       <div class="wrapper">
-        <div class="header-content">
+        <div class="header-content" id="home">
           <h1 class="header-content__logo">
             <a href="#" class="header-content__link">Singolo</a>
           </h1>
@@ -19,19 +19,19 @@
           <nav class="header-content__nav">
             <ul class="header-menu">
               <li class="header-menu__item">
-                <a class="header-menu__link" href="#">Home</a>
+                <a class="header-menu__link" href="#home">Home</a>
               </li>
               <li class="header-menu__item">
-                <a class="header-menu__link" href="#">Services</a>
+                <a class="header-menu__link" href="#services">Services</a>
               </li>
               <li class="header-menu__item">
-                <a class="header-menu__link" href="#">Portfolio</a>
+                <a class="header-menu__link" href="#portfolio">Portfolio</a>
               </li>
               <li class="header-menu__item">
-                <a class="header-menu__link" href="#">About</a>
+                <a class="header-menu__link" href="#about">About</a>
               </li>
               <li class="header-menu__item">
-                <a class="header-menu__link" href="#">Contact</a>
+                <a class="header-menu__link" href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -40,6 +40,7 @@
     </header>
     <section class="slider">
       <div class="wrapper">
+        <h3 hidden>Slider</h3>
         <div class="slider-content">
         <button class="slider__button slider__button_prev"></button>
   
@@ -89,7 +90,7 @@
       </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="wrapper">
         <h2 class="services__header">Our Services</h2>
         <p class="services__text">
@@ -100,7 +101,7 @@
         </p>
         <div class="layout-3-column">
           <article class="service">
-            <img class="service__image service__image_pen" src="./assets/images/services/Pen.png" alt="pen" />
+            <img class="service__image service__image_pen" src="./assets/images/services/Pen.png" alt="" />
             <div class="service__content service-content">
               <h3 class="service-content__caption">Custom Design</h3>
               <p class="service-content__text">
@@ -110,7 +111,7 @@
             </div>
           </article>
           <article class="service">
-            <img class="service__image service__image_bulb" src="./assets/images/services/Bulb.png" alt="bulb" />
+            <img class="service__image service__image_bulb" src="./assets/images/services/Bulb.png" alt="" />
             <div class="service__content service-content">
               <h3 class="service-content__caption">Inovative Ideas</h3>
               <p class="service-content__text">
@@ -120,7 +121,7 @@
             </div>
           </article>
           <article class="service">
-            <img class="service__image service__image_heart" src="./assets/images/services/Heart.png" alt="heart" />
+            <img class="service__image service__image_heart" src="./assets/images/services/Heart.png" alt="" />
             <div class="service__content service-content">
               <h3 class="service-content__caption">Love Is The Answer</h3>
               <p class="service-content__text">
@@ -131,7 +132,7 @@
           </article>
   
           <article class="service">
-            <img class="service__image service__image_phone" src="./assets/images/services/Phone.png" alt="phone" />
+            <img class="service__image service__image_phone" src="./assets/images/services/Phone.png" alt="" />
             <div class="service__content service-content">
               <h3 class="service-content__caption">Responsive Layout</h3>
               <p class="service-content__text">
@@ -141,7 +142,7 @@
             </div>
           </article>
           <article class="service">
-            <img class="service__image service__image_bubble" src="./assets/images/services/Bubble.png" alt="bubble" />
+            <img class="service__image service__image_bubble" src="./assets/images/services/Bubble.png" alt="" />
             <div class="service__content service-content">
               <h3 class="service-content__caption">24 / 7 Support</h3>
               <p class="service-content__text">
@@ -151,7 +152,7 @@
             </div>
           </article>
           <article class="service">
-            <img class="service__image service__image_star" src="./assets/images/services/Star.png" alt="star" />
+            <img class="service__image service__image_star" src="./assets/images/services/Star.png" alt="" />
             <div class="service__content service-content">
               <h3 class="service-content__caption">Feel Like A Star</h3>
               <p class="service-content__text">
@@ -165,7 +166,7 @@
     </section>
 
     <!-- singolo2 -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="wrapper">
         <h2 class="portfolio__title">Portfolio</h2>
         <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -174,29 +175,28 @@
           <button class="button-panel__button">Web Design</button>
           <button class="button-panel__button">Graphic Design</button>
           <button class="button-panel__button">Artwork</button>          
-        </div>
-        <div class="art-album">
-          <img src="./assets/images/portfolio/Project-9-art.png" alt="p9" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-6-art.png" alt="p6" class="art-album__image">
-          <img src="./assets/images/portfolio/Layer 9-art.png" alt="l9" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-2-art.png" alt="p2" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-8-art.png" alt="p8" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-5-art.png" alt="p5" class="art-album__image">
-          <img src="./assets/images/portfolio/Layer 11-art.png" alt="l11" class="art-album__image">
-          <img src="./assets/images/portfolio/Layer 8-art.png" alt="l8" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-7-art.png" alt="p7" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-4-art.png" alt="p4" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-3-art.png" alt="p3" class="art-album__image">
-          <img src="./assets/images/portfolio/Project-art.png" alt="p1" class="art-album__image">
-          <img src="./assets/images/portfolio/Layer 11-art.png" alt="l11" class="art-album__image">
-          <img src="./assets/images/portfolio/Layer 8-art.png" alt="l8" class="art-album__image">
-          <img src="./assets/images/portfolio/Layer 9-art.png" alt="l9" class="art-album__image">
-          <img src="" alt="" class="art-album__image">
-        
-        </div>
+        </div>        
+          <div class="art-album">
+          <img src="./assets/images/portfolio/Project-9-art.png" alt="art9" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-6-art.png" alt="art6" class="art-album__image">
+          <img src="./assets/images/portfolio/Layer-9-art.png" alt="art9" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-2-art.png" alt="art2" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-8-art.png" alt="art8" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-5-art.png" alt="art5" class="art-album__image">
+          <img src="./assets/images/portfolio/Layer-11-art.png" alt="art11" class="art-album__image">
+          <img src="./assets/images/portfolio/Layer-8-art.png" alt="art8" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-7-art.png" alt="art7" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-4-art.png" alt="art4" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-3-art.png" alt="art3" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-art.png" alt="art1" class="art-album__image">
+          <img src="./assets/images/portfolio/Layer-11-art.png" alt="art11" class="art-album__image">
+          <img src="./assets/images/portfolio/Layer-8-art.png" alt="art8" class="art-album__image">
+          <img src="./assets/images/portfolio/Layer-9-art.png" alt="art9" class="art-album__image">
+          <img src="./assets/images/portfolio/Project-art.png" alt="art1" class="art-album__image">
+        </div>        
       </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about">
       <div class="wrapper">
         <h2 class="about-us__title">About Us</h2>
         <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -236,17 +236,15 @@
                 <a href="https://www.facebook.com/" class="social-panel__link social-panel__link_facebook"></a>
                 <a href="https://plus.google.com/" class="social-panel__link social-panel__link_google"></a>
                 <a href="https://twitter.com/" class="social-panel__link social-panel__link_twitter"></a>
-                <a href="https://www.linkedin.com/" class="social-panel__link social-panel__link_linkedin"></a>
-                
-              </div>
-           
+                <a href="https://www.linkedin.com/" class="social-panel__link social-panel__link_linkedin"></a>                
+              </div>           
           </div>
         </div>
       </div>
     </section>
 
     <!-- singolo3 -->
-    <section class="get-a-quote">
+    <section class="get-a-quote" id="contact">
       <div class="wrapper">
       <h2 class="get-a-quote__header">Get a Quote</h2>
       <p class="get-a-quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -281,7 +279,7 @@
     <footer class="footer">
       <div class="wrapper">
         <div class="footer-content">
-      <div class="footer-content__copyright">&copy; Copyright 2013 · by PSDchat.com</div>
+      <div class="footer-content__copyright">&copy; Copyright 2013</div>
       <div class="footer-content__social social-panel">
         
           <a href="https://www.facebook.com/" class="social-panel__link social-panel__link_facebook"></a>

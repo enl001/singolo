@@ -5,10 +5,10 @@
   overflow: hidden;
   padding-top: 5px;
   
-  /* non in greed at the model
-    &__card:nth-child(2) {
+  // not in greed at the model
+  &__card:nth-child(2) {
       margin-left: -2px;
-  } */
+  } 
 
   &__card:first-child .card__text {
     @include transform(1, -0.08px);

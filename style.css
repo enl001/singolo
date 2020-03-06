@@ -203,6 +203,7 @@ html {
   height: 483px;
   background-image: url("./assets/images/slider/iphoneVerticalShadow.png");
   z-index: 1;
+  top: -1px;
 }
 .iphone-vertical__screen {
   position: absolute;
@@ -225,6 +226,7 @@ html {
   position: absolute;
   width: 483px;
   height: 240px;
+  left: 1px;
   background-image: url("./assets/images/slider/iphoneHorizontalShadow.png");
   z-index: 1;
 }
@@ -255,7 +257,7 @@ html {
 .iphone__speaker {
   position: absolute;
   top: 36px;
-  left: 89px;
+  left: 90px;
   width: 36px;
   height: 5px;
   background-color: #acacac;
@@ -264,7 +266,7 @@ html {
 .iphone__camera {
   position: absolute;
   top: 17px;
-  left: 102px;
+  left: 103px;
 }
 .iphone__button {
   position: absolute;
@@ -279,8 +281,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: #d8d8d8;
   z-index: 4;
@@ -289,8 +291,8 @@ html {
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
   background-color: #eb5055;
   z-index: 5;
@@ -352,7 +354,7 @@ html {
 .service {
   width: 300px;
   height: auto;
-  padding-bottom: 31px;
+  padding-bottom: 29px;
   display: flex;
   justify-content: space-between;
 }
@@ -361,7 +363,7 @@ html {
   width: 59px;
   height: 59px;
   resize: none;
-  border: 2 solid black;
+  border: 2px solid black;
   border-radius: 50%;
   z-index: 7;
 }
@@ -379,6 +381,9 @@ html {
   padding-bottom: 10px;
   padding-top: 2px;
   letter-spacing: -0.1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .service-content__text {
   font-size: 1.2rem;
@@ -387,6 +392,9 @@ html {
   line-height: 1.833;
   color: #767e9e;
   text-align: justify;
+  max-height: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .portfolio {
@@ -444,19 +452,19 @@ html {
   border: 1px solid #767e9e;
   border-radius: 5px;
   outline: none;
-  font-size: 1.2rem;
   font-family: Lato, sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
   font-weight: normal;
-  line-height: 1.833;
+  line-height: 1;
   color: #767e9e;
-  vertical-align: top;
-  text-align: center;
+  padding-bottom: 2px;
 }
 .button-panel__button:first-child {
-  padding: 0 6px 0 7px;
+  padding: 0 6px 2px 7px;
 }
 .button-panel__button:last-child {
-  padding: 0 5px;
+  padding: 0 5px 2px 5px;
 }
 .button-panel__button_selected {
   border-color: #dedede;
@@ -476,7 +484,6 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   max-height: 639px;
-  height: auto;
   overflow: hidden;
 }
 .art-album__image {
@@ -525,10 +532,9 @@ html {
   flex-wrap: wrap;
   overflow: hidden;
   padding-top: 5px;
-  /* non in greed at the model
-    &__card:nth-child(2) {
-      margin-left: -2px;
-  } */
+}
+.cards-container__card:nth-child(2) {
+  margin-left: -2px;
 }
 .cards-container__card:first-child .card__text {
   -webkit-transform: scaleY(1);
@@ -567,11 +573,15 @@ html {
 }
 .card__text {
   font-size: 1.2rem;
-  line-height: 1.833;
+  font-style: normal;
   font-weight: normal;
+  line-height: 1.833;
   color: #767e9e;
   text-align: justify;
-  padding-bottom: 22px;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 22px;
 }
 
 .cards-container {
@@ -580,10 +590,9 @@ html {
   flex-wrap: wrap;
   overflow: hidden;
   padding-top: 5px;
-  /* non in greed at the model
-    &__card:nth-child(2) {
-      margin-left: -2px;
-  } */
+}
+.cards-container__card:nth-child(2) {
+  margin-left: -2px;
 }
 .cards-container__card:first-child .card__text {
   -webkit-transform: scaleY(1);
@@ -622,11 +631,15 @@ html {
 }
 .card__text {
   font-size: 1.2rem;
-  line-height: 1.833;
+  font-style: normal;
   font-weight: normal;
+  line-height: 1.833;
   color: #767e9e;
   text-align: justify;
-  padding-bottom: 22px;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 22px;
 }
 
 .social-panel {
@@ -704,6 +717,12 @@ html {
 .form__input::placeholder, .form__textarea::placeholder {
   color: #f48c8f;
 }
+.form__input:not(:placeholder-shown):invalid, .form__textarea:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+.form__input:not(:placeholder-shown):focus:valid, .form__textarea:not(:placeholder-shown):focus:valid {
+  border: 1px solid #f0d8d9;
+}
 .form__input {
   height: 38px;
 }
@@ -735,7 +754,9 @@ html {
   -webkit-text-fill-color: #f48c8f !important;
 }
 
-input[type=text], input[type=email], textarea {
+input[type=text],
+input[type=email],
+textarea {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: normal;
@@ -788,6 +809,7 @@ input[type=text], input[type=email], textarea {
   color: #f0d8d9;
   text-decoration: none;
   margin-left: -1px;
+  text-align: justify;
 }
 .contacts__link_phone {
   background-image: url("./assets/images/get-a-quote/phone.png");
@@ -835,7 +857,7 @@ input[type=text], input[type=email], textarea {
   -o-transform: scaleY(1.05);
   -ms-transform: scaleY(1.05);
   transform: scaleY(1.05);
-  letter-spacing: 0.25px;
+  letter-spacing: 0.3px;
   word-spacing: -0.4px;
   text-align: left;
 }

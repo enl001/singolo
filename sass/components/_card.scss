@@ -22,12 +22,16 @@
     }
 
     &__text {
-      font-size: 1.2rem;
-      line-height: 1.833;
-      font-weight: $font-weight-normal; 
+      @include font ($size: 1.2rem, 
+               $height: 1.833,
+               $weight: $font-weight-normal,
+               $style: normal);      
       color: $about-us-text-color;
       text-align: justify; 
-      padding-bottom: 22px;     
+      max-height: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;    
+      margin-bottom: 22px; 
     }
     
     

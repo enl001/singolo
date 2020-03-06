@@ -11,26 +11,29 @@
         height: 2.2rem;
         margin-right: 10px;
         padding: 0 6px;
+        
         background-color: $portfolio-background-color;
         border: 1px solid $button-color-primary;
         border-radius: 5px;
         outline: none;
-        font-size: 1.2rem;
         font-family: $base-font-family;
-        font-weight: $font-weight-normal;
-        line-height: 1.833;        
+        @include font ($size: 1.2rem, 
+               $height: 1,
+               $weight: $font-weight-normal,
+               $style: normal);               
         color: $button-color-primary;
-        vertical-align: top;
-        text-align: center;
+        //vertical-align: top;
+        //text-align: center;
+        padding-bottom: 2px;
 
     }
     &__button:first-child{
         
-        padding: 0 6px 0 7px;
+        padding: 0 6px 2px 7px;
         
     }
     &__button:last-child{
-        padding: 0 5px;
+        padding: 0 5px 2px 5px;
     }
 
     &__button_selected {        

@@ -19,7 +19,7 @@
       $weight: $font-weight-normal,
       $style: normal);
     color: $footer-text-color;
-    @include transform(1.05, 0.25px);
+    @include transform(1.05, 0.3px);
     word-spacing: -0.4px;;
     text-align: left;
   }

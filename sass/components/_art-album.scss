@@ -1,9 +1,9 @@
-.art-album {
-    display: flex;
+.art-album {   
+
+    display: flex;    
     flex-wrap: wrap;
-    justify-content: space-between;  
-    max-height: 639px;
-    height: auto;
+    justify-content: space-between; 
+    max-height: 639px;    
     overflow: hidden;
     
     &__image {
@@ -15,5 +15,5 @@
       margin: 19px 0 1px 0;
       background-color: $portfolio-image-background-color;
     }
-
+  
 }

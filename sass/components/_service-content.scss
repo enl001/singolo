@@ -6,10 +6,16 @@
     padding-bottom: 10px;
     padding-top: 2px;
     letter-spacing: -0.1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__text {
     @include font($size: 1.2rem, $height: 1.833, $weight: $font-weight-normal, $style: normal);
     color: $services-text-color;
     text-align: justify;
+    max-height: 65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
