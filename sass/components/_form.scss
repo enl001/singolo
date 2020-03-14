@@ -47,9 +47,10 @@
     padding: 0 15px;
     background-color: $get-a-quote-input-color;
     border-radius: 5px;
-    float: right;
+    float: left;
     cursor: pointer;
     margin-bottom: 11px;
+    outline: none;
   }
 
   input:-webkit-autofill,

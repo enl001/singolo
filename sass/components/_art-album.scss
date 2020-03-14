@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between; 
     max-height: 639px;    
-    overflow: hidden;
+    overflow: hidden;    
     
     &__image {
       flex: 1 0 21%;
@@ -14,6 +14,10 @@
       height: auto;
       margin: 19px 0 1px 0;
       background-color: $portfolio-image-background-color;
+
+      &_selected {
+        border: 5px solid $portfolio-image-border-color;
+      }
     }
   
 }

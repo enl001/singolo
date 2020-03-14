@@ -11,32 +11,32 @@
     @include font($size: 1.2rem, $height: 0.5, $weight: $font-weight-bold, $style: normal);
     color: $header-title-color-primary;
     padding-left: 29px;
-    padding-top: 10px;
-    
+    padding-top: 10px;   
 
     @include transform($scaleY: 1.05);
-
-    &:first-child {
-      color: $header-title-color-secondary;
-    }
+    
     &:not(:first-child):before {
       position: absolute;
       bottom: 4px;
       left: 13px;
-
       content: ".";
       @include font($size: 1.9rem, $height: 0.5, $weight: $font-weight-bold, $style: normal);
       color: $header-title-color-dot;
-    }
-    &:hover {
-      color: $header-title-color-secondary;
-      @extend %transition;
-    }
-
+    }  
   }
+
   &__link {
     color: inherit;
     text-decoration: none;
-    letter-spacing: -0.1px;    
+    letter-spacing: -0.1px;   
+
+   &:hover {
+      color: $header-title-color-secondary;
+      @extend %transition;
+    }  
+
+    &_selected {
+      color: $header-title-color-secondary;
+    }
   }
 }
