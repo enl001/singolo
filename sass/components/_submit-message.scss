@@ -6,26 +6,24 @@
   height:100%;
   background: rgba(68, 68, 68, 0.4);
   overflow: hidden;
-  z-index: 50;
-
-  
+  z-index: 999;
 
   &_hidden {
     display: none;
-    pointer-events: fill;
+    //pointer-events: fill;    
   }
 
   &__content {
     position: absolute;
-    top: 90%;
-    left: 50%;
-    max-width: 400px;
+    top: 85%;
+    left: 25%;
+    width: 50%;      
+    //max-height: 50vh;
     background-color: $get-a-quote-background-color;
     font-family: $base-font-family;    
     border-radius: 5px;
     text-align: center;
     padding: 20px;
-
     -webkit-box-shadow: 0 5px 2px 1px $get-a-quote-border-color;
     box-shadow: 0 5px 2px 1px $get-a-quote-border-color;
   }
@@ -39,23 +37,27 @@
     padding-bottom: 10px;
   }
 
-  &__subject,&__description {
+  &__description,&__subject {
+    width: 100%;
+    display: inline-block;    
+    font-family: $base-font-family; 
     @include font ($size: 1.6rem, 
-               $height: 1.2,
-               $weight: $font-weight-normal,
-               $style: normal);
-    color: $get-a-quote-title-color;
-    text-align: justify;
-    padding-bottom: 10px;
-    max-height: 3.8rem;    
+    $height: 1.2,
+    $weight: $font-weight-normal,
+    $style: normal);   
+    max-height: 8rem; 
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 10px;
+    background-color: $get-a-quote-background-color;
+    color: $get-a-quote-title-color;    
+    text-align: justify;    
+    margin: 10px 0;    
   }
 
   &__button {
-    font-family: $base-font-family; 
-    margin-top: 10px; 
+    display: inline-block;
+    font-family: $base-font-family;
+    margin: 10px auto; 
     @include font ($size: 2rem, 
                $height: 1,
                $weight: $font-weight-black,

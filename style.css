@@ -181,11 +181,11 @@ html {
   top: 281px;
 }
 .slider__button_prev {
-  background-image: url("./assets/images/slider/buttonPrev.png");
+  background-image: url("./assets/images/slider/buttonPrev.svg");
   left: 2px;
 }
 .slider__button_next {
-  background-image: url("./assets/images/slider/buttonNext.png");
+  background-image: url("./assets/images/slider/buttonNext.svg");
   right: 0;
 }
 .slider__button:hover {
@@ -197,6 +197,7 @@ html {
   display: inline-block;
   left: 72px;
   top: 53px;
+  display: none;
 }
 .iphone-vertical__shadow {
   position: absolute;
@@ -215,6 +216,11 @@ html {
   height: 339px;
   background-image: url("./assets/images/slider/iphoneVerticalScreen.png");
   z-index: 4;
+  transition: 1s;
+}
+.iphone-vertical__screen_off {
+  background-image: url("./assets/images/slider/iphoneVerticalScreen_off.png");
+  transition: 1s;
 }
 
 .iphone-horizontal {
@@ -222,6 +228,7 @@ html {
   display: inline-block;
   left: 385px;
   top: 174px;
+  display: none;
 }
 .iphone-horizontal__shadow {
   position: absolute;
@@ -240,6 +247,11 @@ html {
   height: 194px;
   background-image: url("./assets/images/slider/iphoneHorizontalScreen.png");
   z-index: 4;
+  transition: 1s;
+}
+.iphone-horizontal__screen_off {
+  background-image: url("./assets/images/slider/iphoneHorizontalScreen_off.png");
+  transition: 1s;
 }
 
 .iphone {
@@ -319,6 +331,7 @@ html {
   height: 16px;
   border: 2px solid #bababa;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .services {
@@ -447,6 +460,7 @@ html {
   height: 2.2rem;
   margin-right: 10px;
   padding: 0 6px;
+  cursor: pointer;
   background-color: #2d303a;
   border: 1px solid #767e9e;
   border-radius: 5px;
@@ -489,6 +503,7 @@ html {
   height: auto;
   margin: 19px 0 1px 0;
   background-color: #464b5e;
+  cursor: pointer;
 }
 .art-album__image_selected {
   border: 5px solid #f06c64;
@@ -872,17 +887,16 @@ textarea {
   height: 100%;
   background: rgba(68, 68, 68, 0.4);
   overflow: hidden;
-  z-index: 50;
+  z-index: 999;
 }
 .submit-message_hidden {
   display: none;
-  pointer-events: fill;
 }
 .submit-message__content {
   position: absolute;
-  top: 90%;
-  left: 50%;
-  max-width: 400px;
+  top: 85%;
+  left: 25%;
+  width: 50%;
   background-color: #f06c64;
   font-family: Lato, "Roboto", sans-serif;
   border-radius: 5px;
@@ -899,22 +913,26 @@ textarea {
   color: #f0d8d9;
   padding-bottom: 10px;
 }
-.submit-message__subject, .submit-message__description {
+.submit-message__description, .submit-message__subject {
+  width: 100%;
+  display: inline-block;
+  font-family: Lato, "Roboto", sans-serif;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.2;
-  color: #f0d8d9;
-  text-align: justify;
-  padding-bottom: 10px;
-  max-height: 3.8rem;
+  max-height: 8rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: 10px;
+  background-color: #f06c64;
+  color: #f0d8d9;
+  text-align: justify;
+  margin: 10px 0;
 }
 .submit-message__button {
+  display: inline-block;
   font-family: Lato, "Roboto", sans-serif;
-  margin-top: 10px;
+  margin: 10px auto;
   font-size: 2rem;
   font-style: normal;
   font-weight: 900;
@@ -927,6 +945,66 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+}
+
+.iphone-vertical-green {
+  position: absolute;
+  display: inline-block;
+  left: 343px;
+  top: 43px;
+}
+.iphone-vertical-green__shadow {
+  position: absolute;
+  width: 255px;
+  height: 513px;
+  background-image: url("./assets/images/slider/iphoneVerticalGreenShadow.png");
+  z-index: 1;
+}
+.iphone-vertical-green__body {
+  position: absolute;
+  width: 230px;
+  height: 486px;
+  background-image: url("./assets/images/slider/iphoneVerticalGreen.svg");
+  z-index: 3;
+}
+.iphone-vertical-green .i-button-green__square {
+  position: absolute;
+  top: 446px;
+  left: 106px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.iphone-vertical-green__screen {
+  position: absolute;
+  display: inline-block;
+  top: 69px;
+  left: 14px;
+  width: 201px;
+  height: 354px;
+  background-image: url("./assets/images/slider/iphoneVerticalGreenScreen.png");
+  z-index: 4;
+  transition: 1s;
+}
+.iphone-vertical-green__screen_off {
+  transition: 1s;
+  background-image: url("./assets/images/slider/iphoneVerticalGreenScreen_off.png");
+}
+
+.iphone-background-image {
+  position: absolute;
+  width: 156px;
+  height: 314px;
+  background-image: url("./assets/images/slider/iphoneBackground.svg");
+}
+.iphone-background-image_left {
+  top: 152px;
+  left: 212px;
+}
+.iphone-background-image_right {
+  top: 152px;
+  left: 572px;
 }
 
 /*# sourceMappingURL=style.css.map */

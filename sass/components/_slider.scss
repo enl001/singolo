@@ -1,6 +1,7 @@
 .slider {
   
   background-color: $slider-background-color;
+  //background-color: $slider-background-secondary-color;
   border-bottom: 6px solid $slider-border-color;
   position: relative;
   min-height: 600px;
@@ -19,12 +20,12 @@
     top:281px;
 
     &_prev {
-      background-image: url("./assets/images/slider/buttonPrev.png");
+      background-image: url("./assets/images/slider/buttonPrev.svg");
       @extend %transition;
       left: 2px;
     }
     &_next {
-      background-image: url("./assets/images/slider/buttonNext.png");
+      background-image: url("./assets/images/slider/buttonNext.svg");
       right: 0;
     }
     &:hover {

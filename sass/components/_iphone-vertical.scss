@@ -3,6 +3,8 @@
   display: inline-block;  
   left:72px;
   top: 53px;
+
+  display: none;
   
   &__shadow {
     position: absolute;
@@ -21,6 +23,12 @@
     height: 339px;
     background-image: url('./assets/images/slider/iphoneVerticalScreen.png');
     z-index: 4;
+    transition: 1s;
+  }
+
+  &__screen_off {
+    background-image: url('./assets/images/slider/iphoneVerticalScreen_off.png');
+    transition: 1s;
   }
   
 }

@@ -3,6 +3,7 @@
     display: inline-block;  
     left:385px;
     top:174px;
+    display: none;
     
 
     &__shadow {
@@ -21,8 +22,14 @@
       left: 57px;
       width: 339px;
       height: 194px;
+      //background-color: black;
       background-image: url('./assets/images/slider/iphoneHorizontalScreen.png');
       z-index: 4;
+      transition: 1s;
+    }
+    &__screen_off {
+      background-image: url('./assets/images/slider/iphoneHorizontalScreen_off.png');
+      transition: 1s;
     }
     
   }

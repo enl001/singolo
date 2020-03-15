@@ -1,0 +1,68 @@
+.iphone-vertical-green {
+  position: absolute;
+  display: inline-block;  
+  left:343px;
+  top: 43px; 
+
+  //display: none;
+  
+  &__shadow {
+    position: absolute;
+    width: 255px;
+    height: 513px;
+    background-image: url('./assets/images/slider/iphoneVerticalGreenShadow.png');
+    z-index: 1;    
+  }
+
+  &__body {
+    position: absolute;
+    width: 230px;
+    height: 486px;
+    background-image: url('./assets/images/slider/iphoneVerticalGreen.svg');
+    z-index: 3;    
+  }
+  .i-button-green__square{
+    position: absolute;
+    top: 446px;
+    left: 106px;
+    width: 18px;
+    height: 18px;
+    //border: 2px solid $slider-button-color;
+    border-radius : 4px;
+    cursor: pointer;    
+  }
+
+  &__screen {
+    position: absolute;
+    display: inline-block;
+    top: 69px;
+    left: 14px;
+    width: 201px;
+    height: 354px;
+    background-image: url('./assets/images/slider/iphoneVerticalGreenScreen.png');
+    z-index: 4;
+    transition: 1s;
+  }
+
+  &__screen_off {
+    transition: 1s;
+    background-image: url('./assets/images/slider/iphoneVerticalGreenScreen_off.png');
+    
+  }
+}
+.iphone-background-image{
+  position: absolute;
+  width: 156px;
+  height: 314px;
+  background-image:  url('./assets/images/slider/iphoneBackground.svg');
+  
+  &_left {
+    top: 152px;
+    left: 212px;
+  }
+  &_right {
+    top: 152px;
+    left: 572px;
+  }
+
+}

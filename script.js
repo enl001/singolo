@@ -14,10 +14,22 @@ function changeSelection(event, tag, itemsArr, className) {
   }
 }
 
-// services
-
-
-
+// slider
+let iButtonVertical = document.getElementById('i-button-vertical');
+let iButtonHorizontal = document.getElementById('i-button-horizontal');
+let iButtonVerticalGreen = document.getElementById('i-button-vertical-green');
+let iPhoneVertical = document.querySelector('.iphone-vertical__screen');
+let iPhoneHorizontal = document.querySelector('.iphone-horizontal__screen');
+let iPhoneVerticalGreen = document.querySelector('.iphone-vertical-green__screen');
+iButtonVertical.addEventListener('click', () => {
+  iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
+});
+iButtonHorizontal.addEventListener('click', () => {
+  iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
+});
+iButtonVerticalGreen.addEventListener('click', () => {
+  iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
+});
 
 // portfolio
 let portfolioTags = document.querySelectorAll('.button-panel__button');
@@ -84,7 +96,6 @@ form.addEventListener('submit',(event) => {
   buttonCloseMessage.focus();
   modal.classList.remove('submit-message_hidden');
   let subj = document.getElementById('subject').value.toString();
-  console.log(subj);
   let subject = (subj !=='')?
                 'Тема: ' + subj : 'Без темы';
   let descr = document.getElementById('description').value.toString();
