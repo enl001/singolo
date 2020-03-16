@@ -31,6 +31,55 @@ iButtonVerticalGreen.addEventListener('click', () => {
   iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
 });
 
+// slider animation carousel
+
+let slides = document.querySelectorAll('.slide-carousel');
+let currentSlide = 0;
+let isEnabled = true;
+let buttonPrev = document.querySelector('.slider__button_prev');
+let buttonNext = document.querySelector('.slider__button_next');
+buttonPrev.addEventListener('click', function() {
+  if(isEnabled){
+    previousSlide(currentSlide);
+  }
+  
+});
+buttonNext.addEventListener('click', function() {
+  if(isEnabled){
+    nextSlide(currentSlide);
+  }
+});
+
+function hideSlide(direction){
+  isEnabled = false;
+  slides[currentSlide].classList.add(direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('active', direction);
+  });
+}
+
+function showSlide(direction){  
+  slides[currentSlide].classList.add('next', direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('next', direction);
+    this.classList.add('active');
+    isEnabled = true;
+  });
+}
+
+function previousSlide(n){
+  hideSlide('to-right');
+  changeCurrentSlide(n-1);
+  showSlide('from-left');
+}
+function nextSlide(n){
+  hideSlide('to-left');
+  changeCurrentSlide(n+1);
+  showSlide('from-right');
+}
+function changeCurrentSlide(n){
+  currentSlide = (n + slides.length) % slides.length;
+}
 // portfolio
 let portfolioTags = document.querySelectorAll('.button-panel__button');
 let buttonPanel = document.querySelector('.button-panel');

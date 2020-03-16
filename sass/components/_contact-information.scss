@@ -16,14 +16,14 @@
 
     &__text {
       @include font ($size : 1.2rem, 
-               $height: 1.833,
+               $height: 1.85,
                $weight: $font-weight-normal,
                $style: normal); 
 
                word-wrap: break-word;
                @include transform($scaleY:1, $spacing:-0.1px);
       color: $get-a-quote-text-color;
-      padding: 10px 0 22px 0;
+      padding: 10px 0 21px 0;
       text-align: justify; 
     }
 

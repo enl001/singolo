@@ -1,11 +1,12 @@
 .slider {
   
-  background-color: $slider-background-color;
-  //background-color: $slider-background-secondary-color;
-  border-bottom: 6px solid $slider-border-color;
+  // background-color: $slider-background-color;
+  // //background-color: $slider-background-secondary-color;
+  // border-bottom: 6px solid $slider-border-color;
   position: relative;
-  min-height: 600px;
+  
   width: auto;
+  overflow: hidden;
 
   &__button {
     position: absolute;
@@ -17,16 +18,17 @@
     opacity: 0.5;
     cursor: pointer;
     outline: none;
-    top:281px;
+    top:281px;    
+    z-index: 15;
 
     &_prev {
       background-image: url("./assets/images/slider/buttonPrev.svg");
       @extend %transition;
-      left: 2px;
+      left: 42px;
     }
     &_next {
       background-image: url("./assets/images/slider/buttonNext.svg");
-      right: 0;
+      right: 40px;
     }
     &:hover {
       opacity: 1;
