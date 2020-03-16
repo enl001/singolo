@@ -15,7 +15,7 @@ html {
   font-size: 10px;
 }
 
-.button-panel__button:hover, .slider__button_prev, .header-menu__item:hover {
+.button-panel__button:hover, .slider__button_prev, .header-menu__link:hover {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -26,17 +26,19 @@ html {
 .body-content {
   max-width: 1020px;
   margin: 0 auto;
+  position: relative;
 }
 
 .wrapper {
+  position: relative;
   max-width: 940px;
   margin: 0 auto;
 }
 
 .slider-content {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 1020px;
+  min-height: 600px;
 }
 
 .iphone-rotate {
@@ -73,13 +75,14 @@ html {
 .header {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
+  z-index: 999;
 }
 
 .header-content {
   display: flex;
   height: 89px;
   justify-content: space-between;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
 }
 .header-content__logo {
   align-self: center;
@@ -116,7 +119,7 @@ html {
 
 .header-menu {
   list-style: none;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   display: flex;
   flex-wrap: wrap;
 }
@@ -137,9 +140,6 @@ html {
   transform: scaleY(1.05);
   letter-spacing: 0px;
 }
-.header-menu__item:first-child {
-  color: #f06c64;
-}
 .header-menu__item:not(:first-child):before {
   position: absolute;
   bottom: 4px;
@@ -151,21 +151,22 @@ html {
   line-height: 0.5;
   color: #494e62;
 }
-.header-menu__item:hover {
-  color: #f06c64;
-}
 .header-menu__link {
   color: inherit;
   text-decoration: none;
   letter-spacing: -0.1px;
 }
+.header-menu__link:hover {
+  color: #f06c64;
+}
+.header-menu__link_selected {
+  color: #f06c64;
+}
 
 .slider {
-  background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
   position: relative;
-  min-height: 600px;
   width: auto;
+  overflow: hidden;
 }
 .slider__button {
   position: absolute;
@@ -178,14 +179,15 @@ html {
   cursor: pointer;
   outline: none;
   top: 281px;
+  z-index: 15;
 }
 .slider__button_prev {
-  background-image: url("./assets/images/slider/buttonPrev.png");
-  left: 2px;
+  background-image: url("./assets/images/slider/buttonPrev.svg");
+  left: 42px;
 }
 .slider__button_next {
-  background-image: url("./assets/images/slider/buttonNext.png");
-  right: 0;
+  background-image: url("./assets/images/slider/buttonNext.svg");
+  right: 40px;
 }
 .slider__button:hover {
   opacity: 1;
@@ -194,7 +196,7 @@ html {
 .iphone-vertical {
   position: absolute;
   display: inline-block;
-  left: 72px;
+  left: 112px;
   top: 53px;
 }
 .iphone-vertical__shadow {
@@ -214,12 +216,17 @@ html {
   height: 339px;
   background-image: url("./assets/images/slider/iphoneVerticalScreen.png");
   z-index: 4;
+  transition: 1s;
+}
+.iphone-vertical__screen_off {
+  background-image: url("./assets/images/slider/iphoneVerticalScreen_off.png");
+  transition: 1s;
 }
 
 .iphone-horizontal {
   position: absolute;
   display: inline-block;
-  left: 385px;
+  left: 425px;
   top: 174px;
 }
 .iphone-horizontal__shadow {
@@ -239,6 +246,11 @@ html {
   height: 194px;
   background-image: url("./assets/images/slider/iphoneHorizontalScreen.png");
   z-index: 4;
+  transition: 1s;
+}
+.iphone-horizontal__screen_off {
+  background-image: url("./assets/images/slider/iphoneHorizontalScreen_off.png");
+  transition: 1s;
 }
 
 .iphone {
@@ -318,12 +330,13 @@ html {
   height: 16px;
   border: 2px solid #bababa;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .services {
   background-color: #f2f2f2;
   border-bottom: 6px solid white;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   min-height: 500px;
   width: 100%;
 }
@@ -399,7 +412,7 @@ html {
   background-color: #2d303a;
   padding-top: 69px;
   border-bottom: 6px solid #323746;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   min-height: 869px;
 }
 .portfolio__title {
@@ -425,7 +438,7 @@ html {
   letter-spacing: 0px;
 }
 
-.button-panel__button:hover, .header-menu__item:hover, .slider__button_prev {
+.button-panel__button:hover, .header-menu__link:hover, .slider__button_prev {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -437,7 +450,7 @@ html {
   display: flex;
   justify-content: left;
   align-items: center;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   height: 2.2rem;
   margin-left: 1px;
 }
@@ -446,11 +459,12 @@ html {
   height: 2.2rem;
   margin-right: 10px;
   padding: 0 6px;
+  cursor: pointer;
   background-color: #2d303a;
   border: 1px solid #767e9e;
   border-radius: 5px;
   outline: none;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: normal;
@@ -465,10 +479,6 @@ html {
   padding: 0 5px 2px 5px;
 }
 .button-panel__button_selected {
-  border-color: #dedede;
-  color: #dedede;
-}
-.button-panel__button:focus {
   border-color: #dedede;
   color: #dedede;
 }
@@ -492,13 +502,17 @@ html {
   height: auto;
   margin: 19px 0 1px 0;
   background-color: #464b5e;
+  cursor: pointer;
+}
+.art-album__image_selected {
+  border: 5px solid #f06c64;
 }
 
 .about-us {
   background-color: #f2f2f2;
   padding-top: 69px;
   border-bottom: 6px solid white;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   width: 100%;
   min-height: 734px;
 }
@@ -544,7 +558,7 @@ html {
 }
 
 .card {
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   max-width: 300px;
   height: 100%;
 }
@@ -602,7 +616,7 @@ html {
 }
 
 .card {
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   max-width: 300px;
   height: 100%;
 }
@@ -670,7 +684,7 @@ html {
 
 .get-a-quote {
   background-color: #f06c64;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   border-bottom: 6px solid #ea676b;
 }
 .get-a-quote__header {
@@ -707,7 +721,7 @@ html {
   margin-bottom: 16px;
   padding: 0 15px;
   background-color: #d6564f;
-  font-family: Lato, sans-serif;
+  font-family: Lato, "Roboto", sans-serif;
   color: #f0d8d9;
   border-radius: 5px;
   outline: none;
@@ -730,18 +744,21 @@ html {
   resize: none;
 }
 .form__submit {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
-  font-weight: 300;
-  line-height: 1;
-  color: #f0d8d9;
+  font-weight: bold;
+  line-height: 1.214;
+  text-transform: uppercase;
+  color: #886a30;
   height: 38px;
+  width: 136px;
   padding: 0 15px;
-  background-color: #d6564f;
+  background-color: #fbc65f;
   border-radius: 5px;
-  float: right;
+  float: left;
   cursor: pointer;
   margin-bottom: 11px;
+  outline: none;
 }
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
@@ -783,7 +800,7 @@ textarea {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.833;
+  line-height: 1.85;
   word-wrap: break-word;
   -webkit-transform: scaleY(1);
   -moz-transform: scaleY(1);
@@ -792,7 +809,7 @@ textarea {
   transform: scaleY(1);
   letter-spacing: -0.1px;
   color: #f0d8d9;
-  padding: 10px 0 22px 0;
+  padding: 10px 0 21px 0;
   text-align: justify;
 }
 
@@ -803,7 +820,7 @@ textarea {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.833;
+  line-height: 1.86;
   color: #f0d8d9;
   text-decoration: none;
   margin-left: -1px;
@@ -861,6 +878,202 @@ textarea {
 }
 .footer-content__social {
   flex-grow: 1;
+}
+
+.submit-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 68, 68, 0.4);
+  overflow: hidden;
+  z-index: 999;
+}
+.submit-message_hidden {
+  display: none;
+  pointer-events: fill;
+}
+.submit-message__content {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  background-color: #f06c64;
+  font-family: Lato, "Roboto", sans-serif;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  -webkit-box-shadow: 0 5px 2px 1px #ea676b;
+  box-shadow: 0 5px 2px 1px #ea676b;
+}
+.submit-message__caption {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  color: #f0d8d9;
+  padding-bottom: 10px;
+}
+.submit-message__description, .submit-message__subject {
+  width: 100%;
+  display: inline-block;
+  font-family: Lato, "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  max-height: 7.68rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #f06c64;
+  color: #f0d8d9;
+  text-align: justify;
+  margin: 10px 0;
+}
+.submit-message__button {
+  display: inline-block;
+  font-family: Lato, "Roboto", sans-serif;
+  margin: 10px auto;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.214;
+  color: #886a30;
+  height: 38px;
+  width: 136px;
+  padding: 0 15px;
+  background-color: #fbc65f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.iphone-vertical-green {
+  position: absolute;
+  display: inline-block;
+  left: 383px;
+  top: 43px;
+}
+.iphone-vertical-green__shadow {
+  position: absolute;
+  width: 255px;
+  height: 513px;
+  background-image: url("./assets/images/slider/iphoneVerticalGreenShadow.png");
+  z-index: 1;
+}
+.iphone-vertical-green__body {
+  position: absolute;
+  width: 230px;
+  height: 486px;
+  background-image: url("./assets/images/slider/iphoneVerticalGreen.svg");
+  z-index: 3;
+}
+.iphone-vertical-green .i-button-green__square {
+  position: absolute;
+  top: 446px;
+  left: 106px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.iphone-vertical-green__screen {
+  position: absolute;
+  display: inline-block;
+  top: 69px;
+  left: 14px;
+  width: 201px;
+  height: 354px;
+  background-image: url("./assets/images/slider/iphoneVerticalGreenScreen.png");
+  z-index: 4;
+  transition: 1s;
+}
+.iphone-vertical-green__screen_off {
+  transition: 1s;
+  background-image: url("./assets/images/slider/iphoneVerticalGreenScreen_off.png");
+}
+
+.iphone-background-image {
+  position: absolute;
+  width: 156px;
+  height: 314px;
+  background-image: url("./assets/images/slider/iphoneBackground.svg");
+}
+.iphone-background-image_left {
+  top: 152px;
+  left: 252px;
+}
+.iphone-background-image_right {
+  top: 152px;
+  left: 612px;
+}
+
+.slide-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: 0.5s ease-in-out;
+  display: none;
+  height: 600px;
+  width: 100%;
+}
+
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide-background_1 {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+.slide-background_2 {
+  background-color: #648bf0;
+  border-bottom: 6px solid #5e86f7;
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
