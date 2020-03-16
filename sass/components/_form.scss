@@ -37,15 +37,17 @@
 
   &__submit {
     @include font(
-      $size: 1.6rem,
-      $height: 1,
-      $weight: $font-weight-light,
+      $size: 1.4rem,
+      $height: 1.214,
+      $weight: $font-weight-bold,
       $style: normal
     );
-    color: $get-a-quote-text-color;
+    text-transform: uppercase;
+    color: $get-a-quote-submit-text-color;
     height: 38px;
+    width: 136px;
     padding: 0 15px;
-    background-color: $get-a-quote-input-color;
+    background-color: $get-a-quote-submit-color;
     border-radius: 5px;
     float: left;
     cursor: pointer;

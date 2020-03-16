@@ -10,15 +10,15 @@
 
   &_hidden {
     display: none;
-    //pointer-events: fill;    
+    pointer-events: fill;    
   }
 
   &__content {
-    position: absolute;
-    top: 85%;
+    position: fixed;
+    top: 25%;
     left: 25%;
-    width: 50%;      
-    //max-height: 50vh;
+    width: 50%; 
+    //max-width: $content-width;  
     background-color: $get-a-quote-background-color;
     font-family: $base-font-family;    
     border-radius: 5px;
@@ -58,19 +58,20 @@
     display: inline-block;
     font-family: $base-font-family;
     margin: 10px auto; 
-    @include font ($size: 2rem, 
-               $height: 1,
-               $weight: $font-weight-black,
-               $style: normal);
-    color: $get-a-quote-text-color;
+    @include font(
+      $size: 1.4rem,
+      $height: 1.214,
+      $weight: $font-weight-bold,
+      $style: normal
+    );
+    color: $get-a-quote-submit-text-color;
     height: 38px;
+    width: 136px;
     padding: 0 15px;
-    background-color: $get-a-quote-input-color;
+    background-color: $get-a-quote-submit-color;
     border: none;
     border-radius: 5px;    
     cursor: pointer;    
     outline: none;
   }
-
-
 }

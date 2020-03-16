@@ -744,14 +744,16 @@ html {
   resize: none;
 }
 .form__submit {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
-  font-weight: 300;
-  line-height: 1;
-  color: #f0d8d9;
+  font-weight: bold;
+  line-height: 1.214;
+  text-transform: uppercase;
+  color: #886a30;
   height: 38px;
+  width: 136px;
   padding: 0 15px;
-  background-color: #d6564f;
+  background-color: #fbc65f;
   border-radius: 5px;
   float: left;
   cursor: pointer;
@@ -890,10 +892,11 @@ textarea {
 }
 .submit-message_hidden {
   display: none;
+  pointer-events: fill;
 }
 .submit-message__content {
-  position: absolute;
-  top: 85%;
+  position: fixed;
+  top: 25%;
   left: 25%;
   width: 50%;
   background-color: #f06c64;
@@ -932,14 +935,15 @@ textarea {
   display: inline-block;
   font-family: Lato, "Roboto", sans-serif;
   margin: 10px auto;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-style: normal;
-  font-weight: 900;
-  line-height: 1;
-  color: #f0d8d9;
+  font-weight: bold;
+  line-height: 1.214;
+  color: #886a30;
   height: 38px;
+  width: 136px;
   padding: 0 15px;
-  background-color: #d6564f;
+  background-color: #fbc65f;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -999,11 +1003,11 @@ textarea {
 }
 .iphone-background-image_left {
   top: 152px;
-  left: 212px;
+  left: 252px;
 }
 .iphone-background-image_right {
   top: 152px;
-  left: 572px;
+  left: 612px;
 }
 
 .slide-carousel {
