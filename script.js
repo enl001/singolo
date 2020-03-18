@@ -15,6 +15,22 @@ function changeSelection(event, tag, itemsArr, className) {
   }
 }
 
+document.addEventListener('scroll', ()=> {
+  let curPos = window.scrollY +95; // header height
+  document.querySelectorAll('section').forEach((el)=>{
+    if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight)> curPos){
+      
+      for (let item of headerMenuLinks) {        
+        item.classList.remove('header-menu__link_selected');
+        if (item.getAttribute('href').substr(1)=== el.id){
+          item.classList.add('header-menu__link_selected');
+        }
+      }
+
+    }
+  });
+});
+
 // slider
 let iButtonVertical = document.getElementById('i-button-vertical');
 let iButtonHorizontal = document.getElementById('i-button-horizontal');
@@ -22,8 +38,9 @@ let iButtonVerticalGreen = document.getElementById('i-button-vertical-green');
 let iPhoneVertical = document.querySelector('.iphone-vertical__screen');
 let iPhoneHorizontal = document.querySelector('.iphone-horizontal__screen');
 let iPhoneVerticalGreen = document.querySelector('.iphone-vertical-green__screen');
-iButtonVertical.addEventListener('click', () => {
-  iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
+
+iButtonVertical.addEventListener('click', () => {      
+      iPhoneVertical.classList.toggle('iphone-vertical__screen_off'); 
 });
 iButtonHorizontal.addEventListener('click', () => {
   iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
