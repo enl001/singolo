@@ -2,7 +2,7 @@
 let headerMenuLinks = document.querySelectorAll('.header-menu__link');
 let headerMenu = document.querySelector('.header-menu');
 headerMenu.addEventListener('click', (event) => {
-  changeSelection(event, 'A', headerMenuLinks, 'header-menu__link_selected');
+  //changeSelection(event, 'A', headerMenuLinks, 'header-menu__link_selected');
 
 });
 
@@ -16,7 +16,7 @@ function changeSelection(event, tag, itemsArr, className) {
 }
 
 document.addEventListener('scroll', ()=> {
-  let curPos = window.scrollY +95; // header height
+  let curPos = window.scrollY + 96; // header height
   document.querySelectorAll('section').forEach((el)=>{
     if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight)> curPos){
       
@@ -200,9 +200,10 @@ buttonPanel.addEventListener('click', (event) => {
   if (event.target.tagName === 'BUTTON') {    
     if (!event.target.classList.contains('button-panel__button_selected')) {
       for (let btn of portfolioTags) { btn.disabled = true; }
-
+      
       for (let img of images) {
         img.classList.remove('art-album__image_selected');
+
       }
 
       let animation = imgContainer.animate([{ opacity: 1 }, { opacity: 0 }],

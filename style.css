@@ -77,6 +77,7 @@ html {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
   position: fixed;
+  width: 1020px;
   z-index: 999;
 }
 
@@ -495,6 +496,7 @@ html {
 }
 
 .art-album {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -502,12 +504,10 @@ html {
   overflow: hidden;
 }
 .art-album__image {
-  flex: 1 0 21%;
-  max-width: 220px;
-  max-height: 187px;
+  flex: 1 0 25%;
   width: auto;
   height: auto;
-  margin: 19px 0 1px 0;
+  margin: 19px 0px 1px 0px;
   background-color: #464b5e;
   cursor: pointer;
 }
