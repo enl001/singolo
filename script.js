@@ -226,10 +226,8 @@ const addPortfolioButtonHandler = () => {
         animation.onfinish = () => {
           let indexes = getRandomOrderedIndexes(images.length);
           let imgContainers = artAlbum.querySelectorAll('.art-album__image-container');
-          for(let i=0;i<images.length;i++){
-            console.log('b: ' +images.length);
-            imgContainers[i].append(images[indexes[i]]);
-            console.log('a: ' +images.length);
+          for(let i=0;i<images.length;i++){            
+            imgContainers[i].append(images[indexes[i]]);            
           }          
           
           artAlbum.animate([{ opacity: 1 }, { opacity: 0 }],
