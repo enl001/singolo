@@ -1,25 +1,56 @@
-.art-album {   
-    position: relative;
-    display: flex;    
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    max-height: 639px;    
-    overflow: hidden;    
-    
-    &__image {
-      flex: 1 0 25%;
-      //max-width: 220px;      
-      // max-height: 187px;
-      
-      width: auto;
-      height: auto;
-      margin: 19px 0px 1px 0px;
-      background-color: $portfolio-image-background-color;
-      cursor: pointer;
+.art-album {
+  //position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  max-height: 639px;
+  overflow: hidden;
 
-      &_selected {
-        border: 5px solid $portfolio-image-border-color;
-      }
+  &__image-container {
+    flex: 1 0 20%;
+    margin: 19px 0 1px;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 20px;
     }
-  
+    
+    
+
+  }
+
+  &__image {    
+    
+    //max-width: 220px;
+    //max-height: 187px;
+
+    width: 100%;
+
+    //height: auto;
+    
+    //background-color: $portfolio-image-background-color;
+    cursor: pointer;
+    &_selected {
+      border: 5px solid $portfolio-image-border-color;
+    }
+    
+    
+  }
+}
+@media (max-width: 1020px) {
+  .art-album__image-container {
+    flex: 1 0 30%;
+    &:not(:nth-child(3n)) {
+      margin-right: 20px;
+    }
+    
+  }
+}
+@media (max-width: 768px) {
+  .art-album__image-container {
+   flex: 1 0 45%;
+
+   &:not(:nth-child(2n)) {
+    margin-right: 20px;
+  }
+}
 }

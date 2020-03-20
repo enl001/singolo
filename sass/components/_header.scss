@@ -1,13 +1,13 @@
 .header {
+    display: block;
     background-color: $header-background-color;
     border-bottom: 6px solid $header-border-color;  
-    position: fixed;
-    width: 1020px;
-        
-    // margin: 0 auto; 
+    position: sticky;
+    top:0;    
     z-index: 999;
 }
 
 html {
     scroll-padding-top: 95px;
 }
+
