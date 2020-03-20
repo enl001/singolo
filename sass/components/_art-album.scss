@@ -12,28 +12,17 @@
 
     &:not(:nth-child(4n)) {
       margin-right: 20px;
-    }
-    
-    
+    }    
 
   }
 
-  &__image {    
+  &__image {
     
-    //max-width: 220px;
-    //max-height: 187px;
-
     width: 100%;
-
-    //height: auto;
-    
-    //background-color: $portfolio-image-background-color;
     cursor: pointer;
     &_selected {
-      border: 5px solid $portfolio-image-border-color;
+       border: 5px solid $portfolio-image-border-color;
     }
-    
-    
   }
 }
 @media (max-width: 1020px) {
@@ -42,15 +31,14 @@
     &:not(:nth-child(3n)) {
       margin-right: 20px;
     }
-    
   }
 }
 @media (max-width: 768px) {
   .art-album__image-container {
-   flex: 1 0 45%;
+    flex: 1 0 45%;
 
-   &:not(:nth-child(2n)) {
-    margin-right: 20px;
+    &:not(:nth-child(2n)) {
+      margin-right: 20px;
+    }
   }
-}
 }

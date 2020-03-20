@@ -83,7 +83,7 @@ html {
 }
 
 html {
-  scroll-padding-top: 95px;
+  scroll-padding-top: 94px;
 }
 
 .header-content {
@@ -173,7 +173,6 @@ html {
 
 .slider {
   position: relative;
-  padding-top: 95px;
   width: auto;
   overflow: hidden;
 }

@@ -1,11 +1,17 @@
+
+window.onload = function () {
+
+  addScrollHandler();
+  addScreenAnimation();
+  addSliderAnimation();
+  addMessageSendHandler();
+  addPortfolioButtonHandler();
+  addImageSelectionHandler();
+}
+
+
+
 // header
-let headerMenuLinks = document.querySelectorAll('.header-menu__link');
-let headerMenu = document.querySelector('.header-menu');
-headerMenu.addEventListener('click', (event) => {
-  //changeSelection(event, 'A', headerMenuLinks, 'header-menu__link_selected');
-
-});
-
 function changeSelection(event, tag, itemsArr, className) {
   if (event.target.tagName === tag) {
     for (let item of itemsArr) {
@@ -15,59 +21,65 @@ function changeSelection(event, tag, itemsArr, className) {
   }
 }
 
-document.addEventListener('scroll', ()=> {
-  let curPos = window.scrollY + 96; // header height
-  document.querySelectorAll('section').forEach((el)=>{
-    if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight)> curPos){
-      
-      for (let item of headerMenuLinks) {        
-        item.classList.remove('header-menu__link_selected');
-        if (item.getAttribute('href').substr(1)=== el.id){
-          item.classList.add('header-menu__link_selected');
+const addScrollHandler = () => {
+  let headerMenuLinks = document.querySelectorAll('.header-menu__link');
+  document.addEventListener('scroll', () => {
+    let curPos = window.scrollY + 96; // header height
+    document.querySelectorAll('section').forEach((el) => {
+      if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+
+        for (let item of headerMenuLinks) {
+          item.classList.remove('header-menu__link_selected');
+          if (item.getAttribute('href').substr(1) === el.id) {
+            item.classList.add('header-menu__link_selected');
+          }
         }
       }
-
-    }
+    });
   });
-});
+}
 
 // slider
-let iButtonVertical = document.getElementById('i-button-vertical');
-let iButtonHorizontal = document.getElementById('i-button-horizontal');
-let iButtonVerticalGreen = document.getElementById('i-button-vertical-green');
-let iPhoneVertical = document.querySelector('.iphone-vertical__screen');
-let iPhoneHorizontal = document.querySelector('.iphone-horizontal__screen');
-let iPhoneVerticalGreen = document.querySelector('.iphone-vertical-green__screen');
+const addScreenAnimation = () => {
+  let iButtonVertical = document.getElementById('i-button-vertical');
+  let iButtonHorizontal = document.getElementById('i-button-horizontal');
+  let iButtonVerticalGreen = document.getElementById('i-button-vertical-green');
+  let iPhoneVertical = document.querySelector('.iphone-vertical__screen');
+  let iPhoneHorizontal = document.querySelector('.iphone-horizontal__screen');
+  let iPhoneVerticalGreen = document.querySelector('.iphone-vertical-green__screen');
 
-iButtonVertical.addEventListener('click', () => {      
-      iPhoneVertical.classList.toggle('iphone-vertical__screen_off'); 
-});
-iButtonHorizontal.addEventListener('click', () => {
-  iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
-});
-iButtonVerticalGreen.addEventListener('click', () => {
-  iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
-});
-
+  iButtonVertical.addEventListener('click', () => {
+    iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
+  });
+  iButtonHorizontal.addEventListener('click', () => {
+    iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
+  });
+  iButtonVerticalGreen.addEventListener('click', () => {
+    iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
+  });
+};
 // slider animation carousel
 
 let slides = document.querySelectorAll('.slide-carousel');
 let currentSlide = 0;
 let isEnabled = true;
-let buttonPrev = document.querySelector('.slider__button_prev');
-let buttonNext = document.querySelector('.slider__button_next');
 
-buttonPrev.addEventListener('click', function () {
-  if (isEnabled) {
-    previousSlide(currentSlide);
-  }
-});
-buttonNext.addEventListener('click', function () {
-  if (isEnabled) {
-    nextSlide(currentSlide);
-  }
-});
+const addSliderAnimation = () => {
 
+  let buttonPrev = document.querySelector('.slider__button_prev');
+  let buttonNext = document.querySelector('.slider__button_next');
+
+  buttonPrev.addEventListener('click', function () {
+    if (isEnabled) {
+      previousSlide(currentSlide);
+    }
+  });
+  buttonNext.addEventListener('click', function () {
+    if (isEnabled) {
+      nextSlide(currentSlide);
+    }
+  });
+};
 function previousSlide(n) {
   hideSlide('to-right');
   changeCurrentSlide(n - 1);
@@ -98,7 +110,6 @@ function changeCurrentSlide(n) {
 }
 
 const swiper = (el) => {
-
   let surface = el;
   let startX = 0;
   let startY = 0;
@@ -118,6 +129,7 @@ const swiper = (el) => {
     startTime = new Date().getTime();
     e.preventDefault();
   });
+
   surface.addEventListener('mouseup', function (e) {
     distX = e.pageX - startX;
     distY = e.pageY - startY;
@@ -190,50 +202,57 @@ swiper(el);
 
 
 // portfolio
-let portfolioTags = document.querySelectorAll('.button-panel__button');
-let buttonPanel = document.querySelector('.button-panel');
 let images = document.querySelectorAll('.art-album__image');
-let imgContainer = document.querySelector('.art-album');
+let artAlbum = document.querySelector('.art-album');
 
-buttonPanel.addEventListener('click', (event) => {
-  
-  if (event.target.tagName === 'BUTTON') {    
-    if (!event.target.classList.contains('button-panel__button_selected')) {
-      for (let btn of portfolioTags) { btn.disabled = true; }
-      
-      for (let img of images) {
-        img.classList.remove('art-album__image_selected');
+const addPortfolioButtonHandler = () => {
+  let buttonPanel = document.querySelector('.button-panel');
+  let portfolioTags = document.querySelectorAll('.button-panel__button');
+  buttonPanel.addEventListener('click', (event) => {
 
-      }
+    if (event.target.tagName === 'BUTTON') {
+      if (!event.target.classList.contains('button-panel__button_selected')) {
+        for (let btn of portfolioTags) { btn.disabled = true; }
 
-      let animation = imgContainer.animate([{ opacity: 1 }, { opacity: 0 }],
-        {
-          duration: 500,
-          fill: "forwards"
-        });
-      animation.onfinish = () => {
-        let indexes = getRandomOrderedIndexes(images.length);
-        for (let i = 0; i < images.length; i++) {
-          images[i].style.order = indexes[i];
+        for (let img of images) {
+          img.classList.remove('art-album__image_selected');
         }
-        imgContainer.animate([{ opacity: 1 }, { opacity: 0 }],
+
+        let animation = artAlbum.animate([{ opacity: 1 }, { opacity: 0 }],
           {
             duration: 500,
-            direction: "reverse",
-            fill: "forwards",
-            delay: 200
+            fill: "forwards"
           });
-        for (let btn of portfolioTags) { btn.disabled = false; }
+        animation.onfinish = () => {
+          let indexes = getRandomOrderedIndexes(images.length);
+          let imgContainers = artAlbum.querySelectorAll('.art-album__image-container');
+          for(let i=0;i<images.length;i++){
+            console.log('b: ' +images.length);
+            imgContainers[i].append(images[indexes[i]]);
+            console.log('a: ' +images.length);
+          }          
+          
+          artAlbum.animate([{ opacity: 1 }, { opacity: 0 }],
+            {
+              duration: 500,
+              direction: "reverse",
+              fill: "forwards",
+              delay: 200
+            });
+          for (let btn of portfolioTags) { btn.disabled = false; }
 
-      };
+        };
+      }
+      changeSelection(event, 'BUTTON', portfolioTags, 'button-panel__button_selected');
     }
-    changeSelection(event, 'BUTTON', portfolioTags, 'button-panel__button_selected');
-  }
-});
+  });
+};
+const addImageSelectionHandler = () => {
 
-imgContainer.addEventListener('click', (event) => {
-  changeSelection(event, 'IMG', images, 'art-album__image_selected');
-});
+  artAlbum.addEventListener('click', (event) => {
+    changeSelection(event, 'IMG', images, 'art-album__image_selected');
+  });
+};
 
 function getRandomOrderedIndexes(arrLength) {
   let arr = Array.from({ length: arrLength }, (v, i) => i);
@@ -246,30 +265,32 @@ function getRandomOrderedIndexes(arrLength) {
   }
   return arr;
 }
+
 // get a quote
+const addMessageSendHandler = () => {
+  let form = document.querySelector('.form');
+  let buttonSend = document.querySelector('.form__submit');
+  let buttonCloseMessage = document.querySelector('.submit-message__button');
+  let modal = document.querySelector('.submit-message');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    //document.querySelector('.body-content').style.overflow = "hidden";
+    buttonCloseMessage.focus();
+    modal.classList.remove('submit-message_hidden');
+    let subj = document.getElementById('subject').value.toString();
+    let subject = (subj !== '') ?
+      'Тема:  ' + subj : 'Без темы';
+    let descr = document.getElementById('description').value.toString();
+    let description = (descr !== '') ?
+      'Описание:  ' + descr : 'Без описания';
 
-let form = document.querySelector('.form');
-let buttonSend = document.querySelector('.form__submit');
-let buttonCloseMessage = document.querySelector('.submit-message__button');
-let modal = document.querySelector('.submit-message');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  //document.querySelector('.body-content').style.overflow = "hidden";
-  buttonCloseMessage.focus();
-  modal.classList.remove('submit-message_hidden');
-  let subj = document.getElementById('subject').value.toString();
-  let subject = (subj !== '') ?
-    'Тема:  ' + subj : 'Без темы';
-  let descr = document.getElementById('description').value.toString();
-  let description = (descr !== '') ?
-    'Описание:  ' + descr : 'Без описания';
+    document.getElementById('message-subject').innerText = subject;
+    document.getElementById('message-description').innerText = description;
 
-  document.getElementById('message-subject').innerText = subject;
-  document.getElementById('message-description').innerText = description;
-
-  buttonCloseMessage.addEventListener('click', () => {
-    //document.querySelector('.body-content').style.overflow = "scroll";
-    modal.classList.add('submit-message_hidden');
-    form.reset();
+    buttonCloseMessage.addEventListener('click', () => {
+      //document.querySelector('.body-content').style.overflow = "scroll";
+      modal.classList.add('submit-message_hidden');
+      form.reset();
+    });
   });
-});
+}
