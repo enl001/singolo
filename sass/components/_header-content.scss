@@ -4,9 +4,15 @@
   justify-content: space-between;  
   font-family: $base-font-family;
    
-  
+   @include media-tablet {
+      justify-content: center;
+      padding-left: 12px;
+    }
   &__logo {
-    align-self: center;    
+    align-self: center;   
+    
+   
+
     
     @include font ($size:2.5rem, $height:0.24, $weight:$font-weight-bold, $style: normal);
     color: $header-title-color-primary;

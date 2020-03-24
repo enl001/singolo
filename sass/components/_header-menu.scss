@@ -3,7 +3,10 @@
   font-family: $base-font-family;
   display: flex;
   flex-wrap: wrap;
-  //width: 372px;
+  
+  @include media-tablet {
+    display: none;
+  }
 
   &__item {
     position: relative;

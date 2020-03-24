@@ -7,12 +7,10 @@
   overflow: hidden;
 
   &__image-container {
-    flex: 1 0 20%;
-    margin: 19px 0 1px;
-
-    &:not(:nth-child(4n)) {
-      margin-right: 20px;
-    }    
+    
+    margin-top: 19px;
+    margin-bottom: 1px;
+    margin-right: 20px;      
 
   }
 
@@ -25,20 +23,40 @@
     }
   }
 }
-@media (max-width: 1020px) {
+@media (min-width: 1020px) {
   .art-album__image-container {
-    flex: 1 0 30%;
-    &:not(:nth-child(3n)) {
-      margin-right: 20px;
-    }
+    flex: 1 0 20%;  
+    &:nth-child(4n) {
+      margin-right: 0;
+    }  
   }
 }
-@media (max-width: 768px) {
+@media (min-width:768px) and (max-width: 1019px) {
   .art-album__image-container {
-    flex: 1 0 45%;
+    flex: 1 0 30%;  
+    &:nth-child(3n) {
+      margin-right: 0;
+    }  
+  }
+}
 
-    &:not(:nth-child(2n)) {
-      margin-right: 20px;
-    }
+@media (min-width:375px) and (max-width: 767px) {
+  .art-album__image-container {
+    flex: 1 0 45%;      
+    &:nth-child(2n) {
+      margin-right: 0;
+    }  
+    
+  }
+}
+
+
+@media (min-width:320px) and (max-width: 374px) {
+  .art-album__image-container {
+    flex: 1 0 45%; 
+    &:nth-child(2n) {
+      margin-right: 0;
+    }  
+    
   }
 }

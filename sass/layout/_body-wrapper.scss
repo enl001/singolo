@@ -1,5 +1,6 @@
 .body-content {
-    max-width: $page-background-width;
+    max-width: $page-background-max-width;
+    min-width: $page-background-min-width;;
     margin: 0 auto;
     position: relative;
 }

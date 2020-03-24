@@ -1,5 +1,8 @@
 .wrapper {
     position: relative;
-    max-width: $content-width;    
+    //max-width: $content-width;  
+    max-width: $page-background-max-width;  
+    padding: 0 40px;
     margin: 0 auto;       
 }
+
