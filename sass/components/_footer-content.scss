@@ -13,15 +13,19 @@
     //background-size: contain;
     //width: 200px;
     //height: 11px;
-    @include font(
-      $size: 1.2rem,
-      $height: 0.5,
-      $weight: $font-weight-normal,
-      $style: normal);
+    @include font($size: 1.2rem, $height: 0.5, $weight: $font-weight-normal, $style: normal);
     color: $footer-text-color;
     @include transform(1.05, 0.3px);
-    word-spacing: -0.4px;;
+    word-spacing: -0.4px;
     text-align: left;
+
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  @include media-tablet {
+    justify-content: center;
   }
 
   &__social {

@@ -1,9 +1,25 @@
 .service {
+  position: relative;
   width: 300px;
-  height: auto;
-  padding-bottom: 30px;
+  height: 104px;
+  margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+
+  @include media-laptop {
+    margin-bottom: 39px; 
+    
+    &:nth-child(2n-1){
+      margin-right: 53px;   
+    }
+  }
+  @include media-tablet { 
+    &:nth-child(2n-1){
+      margin-right: 0;   
+    }
+    margin: 0 0 15px 0;      
+  }  
+
 
   &__image {
     margin-top: 2px;    

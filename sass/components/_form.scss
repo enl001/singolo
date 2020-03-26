@@ -53,6 +53,12 @@
     cursor: pointer;
     margin-bottom: 11px;
     outline: none;
+
+    @include media-tablet {
+      height: 50px;
+      width: 100%;
+    }
+
   }
 
   input:-webkit-autofill,

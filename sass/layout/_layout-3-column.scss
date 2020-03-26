@@ -3,5 +3,23 @@
   flex: 1 0 32%;
   flex-wrap: wrap;
   justify-content: space-between;
+
+
+  @include media-laptop {
+    flex: 1 0 45%;
+    justify-content: space-evenly;    
+  }  
+
+  @include media-768 {
+    flex: 1 0 45%;
+    justify-content: stretch;    
+  }
+
+  @include media-tablet {
+    flex-direction: column;     
+    align-content: center;         
+  }  
+  
+
   
 }

@@ -3,6 +3,12 @@
     //max-width: $content-width;  
     max-width: $page-background-max-width;  
     padding: 0 40px;
-    margin: 0 auto;       
+    margin: 0 auto;   
+    
+    
+    @include media-tablet {
+        padding: 0 30px;        
+      }  
+
 }
 

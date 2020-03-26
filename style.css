@@ -37,6 +37,11 @@ html {
   padding: 0 40px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
 
 .slider-content {
   position: relative;
@@ -59,6 +64,24 @@ html {
   flex: 1 0 32%;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 1019px) {
+  .layout-3-column {
+    flex: 1 0 45%;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .layout-3-column {
+    flex: 1 0 45%;
+    justify-content: stretch;
+  }
+}
+@media (max-width: 767px) {
+  .layout-3-column {
+    flex-direction: column;
+    align-content: center;
+  }
 }
 
 .layout-2-column {
@@ -94,7 +117,7 @@ html {
   justify-content: space-between;
   font-family: Lato, "Roboto", sans-serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header-content {
     justify-content: center;
     padding-left: 12px;
@@ -139,7 +162,7 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header-menu {
     display: none;
   }
@@ -386,11 +409,28 @@ html {
 }
 
 .service {
+  position: relative;
   width: 300px;
-  height: auto;
-  padding-bottom: 30px;
+  height: 104px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 1019px) {
+  .service {
+    margin-bottom: 39px;
+  }
+  .service:nth-child(2n-1) {
+    margin-right: 53px;
+  }
+}
+@media (max-width: 767px) {
+  .service {
+    margin: 0 0 15px 0;
+  }
+  .service:nth-child(2n-1) {
+    margin-right: 0;
+  }
 }
 .service__image {
   margin-top: 2px;
@@ -811,6 +851,12 @@ html {
   margin-bottom: 11px;
   outline: none;
 }
+@media (max-width: 767px) {
+  .form__submit {
+    height: 50px;
+    width: 100%;
+  }
+}
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
@@ -926,6 +972,16 @@ textarea {
   letter-spacing: 0.3px;
   word-spacing: -0.4px;
   text-align: left;
+}
+@media (max-width: 767px) {
+  .footer-content__copyright {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .footer-content {
+    justify-content: center;
+  }
 }
 .footer-content__social {
   flex-grow: 1;
@@ -1143,7 +1199,7 @@ textarea {
   width: 25px;
   height: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hamburger {
     display: inline-block;
   }
