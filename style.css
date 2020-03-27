@@ -559,6 +559,32 @@ html {
   margin-bottom: 1px;
   margin-right: 20px;
 }
+.art-album__image-container:nth-child(4n) {
+  margin-right: 0;
+}
+@media (max-width: 1019px) {
+  .art-album__image-container {
+    flex: 1 0 30%;
+  }
+  .art-album__image-container:nth-child(n) {
+    margin-right: 20px;
+  }
+  .art-album__image-container:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .art-album__image-container {
+    flex: 1 0 45%;
+    margin-top: 9px;
+  }
+  .art-album__image-container:nth-child(n) {
+    margin-right: 10px;
+  }
+  .art-album__image-container:nth-child(2n) {
+    margin-right: 0;
+  }
+}
 .art-album__image {
   width: 100%;
   cursor: pointer;
@@ -567,38 +593,6 @@ html {
   border: 5px solid #f06c64;
 }
 
-@media (min-width: 1020px) {
-  .art-album__image-container {
-    flex: 1 0 20%;
-  }
-  .art-album__image-container:nth-child(4n) {
-    margin-right: 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 1019px) {
-  .art-album__image-container {
-    flex: 1 0 30%;
-  }
-  .art-album__image-container:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-@media (min-width: 375px) and (max-width: 767px) {
-  .art-album__image-container {
-    flex: 1 0 45%;
-  }
-  .art-album__image-container:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-@media (min-width: 320px) and (max-width: 374px) {
-  .art-album__image-container {
-    flex: 1 0 45%;
-  }
-  .art-album__image-container:nth-child(2n) {
-    margin-right: 0;
-  }
-}
 .about-us {
   background-color: #f2f2f2;
   padding-top: 69px;
@@ -636,6 +630,9 @@ html {
   overflow: hidden;
   padding-top: 5px;
 }
+.cards-container__card:not(:nth-child(3)) {
+  margin-right: 2%;
+}
 .cards-container__card:nth-child(2) {
   margin-left: -2px;
 }
@@ -654,8 +651,7 @@ html {
   height: 100%;
 }
 .card__image {
-  max-width: 300px;
-  max-height: 300px;
+  width: 100%;
 }
 .card__name {
   max-width: 300px;
@@ -681,6 +677,7 @@ html {
   line-height: 1.833;
   color: #767e9e;
   text-align: justify;
+  max-width: 300px;
   max-height: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -694,6 +691,9 @@ html {
   overflow: hidden;
   padding-top: 5px;
 }
+.cards-container__card:not(:nth-child(3)) {
+  margin-right: 2%;
+}
 .cards-container__card:nth-child(2) {
   margin-left: -2px;
 }
@@ -712,8 +712,7 @@ html {
   height: 100%;
 }
 .card__image {
-  max-width: 300px;
-  max-height: 300px;
+  width: 100%;
 }
 .card__name {
   max-width: 300px;
@@ -739,6 +738,7 @@ html {
   line-height: 1.833;
   color: #767e9e;
   text-align: justify;
+  max-width: 300px;
   max-height: 80px;
   overflow: hidden;
   text-overflow: ellipsis;

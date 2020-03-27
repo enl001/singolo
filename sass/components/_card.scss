@@ -4,8 +4,10 @@
     height: 100%;
 
     &__image {
-      max-width: 300px;
-      max-height: 300px;
+      //max-width: 300px;
+      //max-height: 300px;
+      width: 100%;
+
     }
 
     &__name {
@@ -28,6 +30,7 @@
                $style: normal);      
       color: $about-us-text-color;
       text-align: justify; 
+      max-width: 300px;
       max-height: 80px;
       overflow: hidden;
       text-overflow: ellipsis;    
