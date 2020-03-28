@@ -2,8 +2,20 @@
     position: absolute;
     display: inline-block;  
     left:425px;
+    
     top:174px;
      
+    @include media-laptop {
+      transform: scale(0.75);
+      left: calc(50% - 60px);
+      top:133px;
+      
+    }
+    @include media-tablet {
+      transform: scale(0.37);
+      left: calc(50% - 30px);
+      top:65px;
+  }
 
     &__shadow {
       position: absolute;

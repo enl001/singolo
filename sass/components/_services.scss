@@ -5,11 +5,18 @@
     min-height: 500px;
     width: 100%;
 
+    
+
     &__header {
       padding-top: 69px;
       @include font($size: 3rem, $height: 0.6, $weight: $font-weight-black, $style: normal);
       @include transform($scaleY: 1, $spacing:-0.2px);
       color: $services-title-color;
+
+      @include media-tablet {
+        padding-top: 33px;        
+      }
+
     }
     &__text {
       @include font($size: 1.8rem, $height: 1.667, $weight: $font-weight-light, $style: normal);

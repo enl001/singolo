@@ -4,10 +4,23 @@
     
     justify-content: space-between;
 
+    @include media-tablet {
+        display: block;
+      }
+
 }
 .left-column {
-   flex-grow: 2;
+   flex: 2 0 60%;
+   margin-right: 20px;
+
+   @include media-laptop {
+    margin-right: 29px;
+  }
+  @include media-tablet {
+    margin-right: 0;
+  }
+
 }
 .right-column {
-    flex-grow: 1;
+    flex: 1 0 30%;
 }

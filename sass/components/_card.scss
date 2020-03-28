@@ -1,17 +1,30 @@
 .card {
-    font-family: $base-font-family;
-    max-width: 300px;
-    height: 100%;
+  position: relative;
+    //max-width: 300px; 
 
-    &__image {
-      //max-width: 300px;
-      //max-height: 300px;
-      width: 100%;
-
+    &:not(:nth-child(3)){
+      margin-right: 2.2%;
     }
 
-    &__name {
-      max-width: 300px;
+    @include media-tablet {
+      &:not(:nth-child(3)){
+        margin-right: 0;
+      }
+      
+      margin-right: 0;
+      margin-bottom: 34px;
+    }
+
+    font-family: $base-font-family;      
+
+    &__image {
+      
+      width: 100%; 
+    }
+
+    &__name {   
+      //max-width: 300px;   
+      width: 100%;
       font-size: 1.8rem;
       line-height: 1;        
       font-weight: $font-weight-black; 
@@ -24,13 +37,14 @@
     }
 
     &__text {
+     // max-width: 300px;
+      width: 100%;
       @include font ($size: 1.2rem, 
                $height: 1.833,
                $weight: $font-weight-normal,
                $style: normal);      
       color: $about-us-text-color;
-      text-align: justify; 
-      max-width: 300px;
+      text-align: justify;       
       max-height: 80px;
       overflow: hidden;
       text-overflow: ellipsis;    

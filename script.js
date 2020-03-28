@@ -51,12 +51,24 @@ const addScreenAnimation = () => {
   iButtonVertical.addEventListener('click', () => {
     iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
   });
+  iButtonVertical.addEventListener('touchstart', () => {
+    iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
+  });
+
   iButtonHorizontal.addEventListener('click', () => {
     iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
   });
+  iButtonHorizontal.addEventListener('touchstart', () => {
+    iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
+  });
+
   iButtonVerticalGreen.addEventListener('click', () => {
     iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
   });
+  iButtonVerticalGreen.addEventListener('touchstart', () => {
+    iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
+  });
+
 };
 // slider animation carousel
 
@@ -226,10 +238,8 @@ const addPortfolioButtonHandler = () => {
         animation.onfinish = () => {
           let indexes = getRandomOrderedIndexes(images.length);
           let imgContainers = artAlbum.querySelectorAll('.art-album__image-container');
-          for(let i=0;i<images.length;i++){
-            console.log('b: ' +images.length);
-            imgContainers[i].append(images[indexes[i]]);
-            console.log('a: ' +images.length);
+          for(let i=0;i<images.length;i++){            
+            imgContainers[i].append(images[indexes[i]]);            
           }          
           
           artAlbum.animate([{ opacity: 1 }, { opacity: 0 }],

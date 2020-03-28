@@ -1,6 +1,15 @@
 .slider-content {
      position: relative;
-     width:1020px;
+     max-width:1020px;
+     width: 100%;
      min-height:600px;
+     
          
+     @include media-laptop {
+          min-height: 447px; 
+     }
+      
+     @include media-tablet {
+          min-height: 218px; 
+     }
 }

@@ -6,6 +6,14 @@
     width: 100%;
     min-height: 734px;
 
+    @include media-tablet {
+      padding-top: 33px;
+      padding-bottom: 5px;
+    }
+    @include media-mobile {
+      border-bottom: none;
+    }
+
     &__title{      
       font-weight: $font-weight-black; 
       font-size: 3rem;  

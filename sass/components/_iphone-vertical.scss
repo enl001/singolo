@@ -1,9 +1,22 @@
 .iphone-vertical {
   position: absolute;
   display: inline-block;  
-  left:112px;
+  left:112px;  
   top: 53px;
  
+  @include media-laptop {
+    transform: scale(0.75);
+    top: 41px;
+    left: calc(50% - 270px);
+  }
+
+  @include media-tablet {
+        transform: scale(0.37);
+        left: calc(50% - 135px);
+        top:20px;
+    }
+
+
   
   &__shadow {
     position: absolute;

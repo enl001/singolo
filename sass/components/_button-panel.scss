@@ -1,10 +1,13 @@
 .button-panel {
+    position: relative;
     display: flex;
     justify-content: left;
     align-items: center;
     font-family: $base-font-family;
-    height: 2.2rem;
+    //height: 2.2rem;
     margin-left: 1px;
+    //min-width: 300px;
+    flex-wrap: wrap;    
 
     &__button {
         display: inline-block;
@@ -12,6 +15,8 @@
         margin-right: 10px;
         padding: 0 6px;
         cursor: pointer;
+        margin-top: 10px;
+        
         
         background-color: $portfolio-background-color;
         border: 1px solid $button-color-primary;
@@ -33,8 +38,16 @@
         padding: 0 6px 2px 7px;
         
     }
+    &__button:nth-child(2){        
+        min-width: 79px;        
+    }
+    &__button:nth-child(3){        
+        min-width: 95px;        
+    }
+
     &__button:last-child{
         padding: 0 5px 2px 5px;
+        margin-right: 0;
     }
 
     &__button_selected {        

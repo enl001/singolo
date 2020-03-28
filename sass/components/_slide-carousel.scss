@@ -6,6 +6,13 @@
   display: none;
   height: 600px; 
   width: 100%; 
+  
+  @include media-laptop {
+    height: 447px; 
+  }
+  @include media-tablet {
+    height: 218px; 
+}
 
 }
 
@@ -66,3 +73,5 @@
     left: 0;
   }
 }
+
+

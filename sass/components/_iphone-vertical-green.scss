@@ -4,6 +4,22 @@
   left:383px;
   top: 43px; 
 
+
+  @include media-laptop {
+    transform: scale(0.75);
+    top: 41px;
+    left: calc(50% - 90px);
+  }
+
+  @include media-tablet {
+        transform: scale(0.37);
+        left: calc(50% - 44px);
+        top:20px;
+    }
+
+
+
+
   //display: none;
   
   &__shadow {
@@ -51,18 +67,51 @@
   }
 }
 .iphone-background-image{
+  display: inline-block;
   position: absolute;
   width: 156px;
   height: 314px;
   background-image:  url('./assets/images/slider/iphoneBackground.svg');
   
+  @include media-laptop {
+    transform: scale(0.75);    
+  }
+
+  @include media-tablet {
+        transform: scale(0.37);        
+    }
+
+
   &_left {
     top: 152px;
     left: 252px;
+
+    @include media-laptop {
+      top: 80px; 
+      left: calc(50% - 210px);   
+    }
+  
+    @include media-tablet {
+      top: -40px;     
+      left: calc(50% - 140px);
+    }
+
+
   }
   &_right {
     top: 152px;
     left: 612px;
+
+    @include media-laptop {
+      top: 80px;  
+      left: calc(50% + 63px);  
+    }
+  
+    @include media-tablet {
+      top: -40px;  
+      left: calc(50% - 10px);
+      }
+
   }
 
 }

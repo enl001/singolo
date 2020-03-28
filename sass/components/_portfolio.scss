@@ -5,6 +5,13 @@
       font-family: $base-font-family;
       min-height: 869px;
 
+      @include media-tablet {
+        min-height: 712px;
+      }
+      @include media-mobile {
+        min-height: 712px;
+      }
+
     &__title{     
       
       font-weight: $font-weight-black; 

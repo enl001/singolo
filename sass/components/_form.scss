@@ -1,5 +1,5 @@
 .form {
-  max-width: 619px;
+  //max-width: 619px;
   width: 100%;
 
   &__input,
@@ -51,12 +51,20 @@
     border-radius: 5px;
     float: left;
     cursor: pointer;
-    margin-bottom: 11px;
+    margin-bottom: 58px;
     outline: none;
 
     @include media-tablet {
       height: 50px;
       width: 100%;
+      margin-bottom: 22px;
+    }
+
+    @include media-laptop {      
+      margin-bottom: 39px;
+    }
+    @include media-laptop {      
+      margin-bottom: 35px;
     }
 
   }

@@ -18,17 +18,33 @@
     opacity: 0.5;
     cursor: pointer;
     outline: none;
-    top:281px;    
+    top:calc(50% - 13px);    
     z-index: 15;
+
+    
 
     &_prev {
       background-image: url("./assets/images/slider/buttonPrev.svg");
       @extend %transition;
       left: 42px;
+      @include media-laptop {
+        left: 26px; 
+      }
+      @include media-tablet {
+        left: 11px; 
+      }
+
+
     }
     &_next {
       background-image: url("./assets/images/slider/buttonNext.svg");
       right: 40px;
+      @include media-laptop {
+        right: 26px; 
+      }
+      @include media-tablet {
+        right: 11px; 
+      }
     }
     &:hover {
       opacity: 1;

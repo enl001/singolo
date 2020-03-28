@@ -1,10 +1,27 @@
 .art-album {
-  //position: relative;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   //justify-content: space-between;
   max-height: 639px;
   overflow: hidden;
+  
+
+  @include media-laptop {
+    max-height:1105px;
+    margin-bottom: 65px;
+    margin-top: 8px;
+  }
+  @include media-tablet {
+    max-height:1214px;
+    margin-bottom: 42px;
+    margin-top: 15px;
+  }
+  @include media-mobile {
+    max-height:568px;
+    margin-bottom: 42px;
+    margin-top: 15px;
+  }
 
   &__image-container {
     
@@ -55,3 +72,9 @@
   }
 }
 
+.art-album .hide {
+  @include media-tablet { 
+    display: none;
+  }
+  
+}

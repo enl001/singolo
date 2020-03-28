@@ -14,6 +14,8 @@
         text-align: left;  
         padding: 69px 0 26px 0;
 
+
+
     }
 
     &__text {
@@ -23,7 +25,13 @@
                $style: normal); 
         color: $get-a-quote-text-color; 
         text-align: justify;    
-        padding-bottom: 44px;          
+        padding-bottom: 44px;       
+        
+        @include media-laptop {
+            padding-bottom: 34px; 
+          }
+          
+        
     }
 
 }
