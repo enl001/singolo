@@ -27,7 +27,9 @@
     
     margin-top: 19px;
     margin-bottom: 1px;
-    margin-right: 20px;   
+    margin-right: 20px;  
+    
+    flex: 1 0 22%;
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -47,10 +49,10 @@
     } 
     @include media-tablet { 
       flex: 1 0 45%;
-      margin-top: 9px;
+      margin-top: 13px;
 
       &:nth-child(n) {
-        margin-right: 10px;
+        margin-right: 14px;
       }
 
       &:nth-child(2n) {
@@ -67,7 +69,8 @@
     width: 100%;
     cursor: pointer;
     &_selected {
-       border: 5px solid $portfolio-image-border-color;
+      border-style: inset;
+       border:  5px solid $portfolio-image-border-color;
     }
   }
 }

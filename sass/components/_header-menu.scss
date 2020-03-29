@@ -3,6 +3,20 @@
   font-family: $base-font-family;
   display: flex;
   flex-wrap: wrap;
+
+
+  &_mobile {
+    position: absolute;
+    list-style: none;
+    font-family: $base-font-family;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 232px;
+    right: 0;
+    min-width: 205px;    
+    //min-height: 260px;
+  }
   
   @include media-tablet {
     display: none;
@@ -25,7 +39,21 @@
       content: ".";
       @include font($size: 1.9rem, $height: 0.5, $weight: $font-weight-bold, $style: normal);
       color: $header-title-color-dot;
-    }  
+    } 
+    
+    &_mobile {
+      position: relative;
+      text-transform: uppercase;
+      @include font($size: 2.4rem, $height: 1.2, $weight: $font-weight-bold, $style: normal);
+      color: $header-title-color-primary;
+
+      &:not(:last-child){
+        padding-bottom: 27px;
+      }
+    }
+
+
+
   }
 
   &__link {

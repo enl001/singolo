@@ -1,6 +1,6 @@
 
 window.onload = function () {
-
+  addHamburgerHandler();
   addScrollHandler();
   addScreenAnimation();
   addSliderAnimation();
@@ -12,6 +12,25 @@ window.onload = function () {
 
 
 // header
+
+const addHamburgerHandler = () => {
+  let hamburger = document.querySelector('.hamburger');
+  let menu = document.querySelector('.mobile-menu');
+  menu.addEventListener('click', (event) => {
+    if(event.target.tagName === 'A' ) {
+      hamburger.classList.toggle('hamburger_activated')
+      menu.classList.toggle('mobile-menu_hidden');
+    }
+  });
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger_activated')
+    menu.classList.toggle('mobile-menu_hidden');
+  });
+}
+
+
+
 function changeSelection(event, tag, itemsArr, className) {
   if (event.target.tagName === tag) {
     for (let item of itemsArr) {

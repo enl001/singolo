@@ -28,7 +28,7 @@
       @extend %transition;
       left: 42px;
       @include media-laptop {
-        left: 26px; 
+        left: 29px; 
       }
       @include media-tablet {
         left: 11px; 
@@ -40,7 +40,7 @@
       background-image: url("./assets/images/slider/buttonNext.svg");
       right: 40px;
       @include media-laptop {
-        right: 26px; 
+        right: 29px; 
       }
       @include media-tablet {
         right: 11px; 
