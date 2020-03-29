@@ -1,6 +1,6 @@
 
 window.onload = function () {
-
+  addHamburgerHandler();
   addScrollHandler();
   addScreenAnimation();
   addSliderAnimation();
@@ -12,6 +12,25 @@ window.onload = function () {
 
 
 // header
+
+const addHamburgerHandler = () => {
+  let hamburger = document.querySelector('.hamburger');
+  let menu = document.querySelector('.mobile-menu');
+  menu.addEventListener('click', (event) => {
+    if(event.target.tagName === 'A' ) {
+      hamburger.classList.toggle('hamburger_activated')
+      menu.classList.toggle('mobile-menu_hidden');
+    }
+  });
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger_activated')
+    menu.classList.toggle('mobile-menu_hidden');
+  });
+}
+
+
+
 function changeSelection(event, tag, itemsArr, className) {
   if (event.target.tagName === tag) {
     for (let item of itemsArr) {
@@ -51,12 +70,24 @@ const addScreenAnimation = () => {
   iButtonVertical.addEventListener('click', () => {
     iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
   });
+  iButtonVertical.addEventListener('touchstart', () => {
+    iPhoneVertical.classList.toggle('iphone-vertical__screen_off');
+  });
+
   iButtonHorizontal.addEventListener('click', () => {
     iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
   });
+  iButtonHorizontal.addEventListener('touchstart', () => {
+    iPhoneHorizontal.classList.toggle('iphone-horizontal__screen_off');
+  });
+
   iButtonVerticalGreen.addEventListener('click', () => {
     iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
   });
+  iButtonVerticalGreen.addEventListener('touchstart', () => {
+    iPhoneVerticalGreen.classList.toggle('iphone-vertical-green__screen_off');
+  });
+
 };
 // slider animation carousel
 
